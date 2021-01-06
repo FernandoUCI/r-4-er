@@ -1,0 +1,16 @@
+--- 
+title: "R for Learning Analtics Research"
+author: "Fernando Rodriguez & Hye Rin lee"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This book will teach you how to use the R programming language for learning analytics research."
+---
+
+# Prerequisites
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+

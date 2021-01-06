@@ -1,0 +1,20 @@
+h1:your-first-plot Your first plot
+h2:loading-libraries Loading Libraries
+h2:creating-code-chunks-in-r-markdown Creating code chunks in R-Markdown
+h2:running-chunnks Running chunnks
+h2:assignment Assignment
+h2:creating-d-which-is-a-b Creating d, which is a + b
+h2:exploring-data Exploring Data
+h2:mtcars-data  data
+h2:pressure-data  data
+h2:graphing-data Graphing Data
+h2:a-note-on-arguments A Note on Arguments
+h2:aes-function-for-stating-your-x-and-y-axis aes() function for stating your x and y axis
+h2:the-power-of The power of 
+h2:adding-features-to-your-ggplot-graph-using Adding features to your ggplot graph using 
+h2:theme-function-for-modifying-components-of-your-graph theme() function for modifying components of your graph
+h2:labs-function-for-labeling-your-graph labs() function for labeling your graph
+h2:scale_color_gradient-function-for-using-a-color-gradient-on-mpg scale_color_gradient() function for using a color gradient on mpg
+h2:facet_grid-function-splitting-up-the-graph-by-a-group facet_grid() function splitting up the graph by a group
+h2:learning-more-about-libraries-and-functions Learning More About Libraries and Functions
+
