@@ -1,6 +1,8 @@
 h1:grounding-concepts Grounding Concepts
 h2:creating-code-chunks-in-r-markdown Creating code chunks in R-Markdown
 h2:running-chunks Running chunks
+h1:the-very-basics The very basics
+h2:simple-calculations Simple Calculations
 h2:assignment-operator Assignment Operator
 h2:environment-pane-in-r-studio Environment Pane in R-Studio
 h2:types-of-objects Types of Objects
@@ -9,9 +11,10 @@ h3:matrix Matrix
 h3:data-frame Data Frame
 h2:exploring-data Exploring Data
 h2:mtcars-data  data
-h2:pressure-data  data
-h2:graphing-data Graphing Data
+h2:view View()
 h2:a-note-on-arguments A Note on Arguments
+h1:building-your-first-data-visualization Building Your First Data Visualization
+h1:intro-to-plotting-and-the-ggplot-library Intro to plotting and the ggplot library
 h2:loading-libraries Loading Libraries
 h2:aes-function-for-stating-your-x-and-y-axis aes() function for stating your x and y axis
 h2:the-power-of The power of 
@@ -19,6 +22,6 @@ h2:adding-features-to-your-ggplot-graph-using Adding features to your ggplot gra
 h2:theme-function-for-modifying-components-of-your-graph theme() function for modifying components of your graph
 h2:labs-function-for-labeling-your-graph labs() function for labeling your graph
 h2:scale_color_gradient-function-for-using-a-color-gradient-on-mpg scale_color_gradient() function for using a color gradient on mpg
-h2:facet_grid-function-splitting-up-the-graph-by-a-group facet_grid() function splitting up the graph by a group
+h2:facet_wrap-function-splitting-up-the-graph-by-a-group facet_wrap() function splitting up the graph by a group
 h2:learning-more-about-libraries-and-functions Learning More About Libraries and Functions
 
