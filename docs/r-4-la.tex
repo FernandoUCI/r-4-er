@@ -108,38 +108,20 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-% https://github.com/rstudio/rmarkdown/issues/337
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-% https://github.com/rstudio/rmarkdown/pull/252
-\usepackage{titling}
-\setlength{\droptitle}{-2em}
-
-\pretitle{\vspace{\droptitle}\centering\huge}
-\posttitle{\par}
-
-\preauthor{\centering\large\emph}
-\postauthor{\par}
-
-\predate{\centering\large\emph}
-\postdate{\par}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{R for Educational \& Psychological Research}
 \author{Fernando Rodriguez \& Hye Rin Lee}
-\date{2021-01-03}
+\date{2021-01-09}
 
 \begin{document}
-\frontmatter
 \maketitle
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\mainmatter
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
@@ -186,57 +168,87 @@ Hye Rin Lee is a doctoral student in the School of Education at the University o
 
 We would like to thank\ldots.
 
-\hypertarget{your-first-plot}{%
-\chapter{Your first plot}\label{your-first-plot}}
+\hypertarget{grounding-concepts}{%
+\chapter{Grounding Concepts}\label{grounding-concepts}}
 
-\hypertarget{loading-libraries}{%
-\section{Loading Libraries}\label{loading-libraries}}
+\hypertarget{a-quick-tour-of-r-and-r-studio}{%
+\section{A Quick tour of R and R-Studio}\label{a-quick-tour-of-r-and-r-studio}}
 
-First, let's load the libraries you will use for this lesson. This is the first
-thing you should do when writing an R-Markdown document. That way, you ensure
-that you load all of the necessary libraries prior to running code
+Please watch the first 15 minutes of the Lesson 01 workshop video, as we give you a run down of these programs what all of these panes, tabs, and buttons do.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# install.libraries("gglot2") \textless{}{-} installing libraries require double qoutations ""}
-\CommentTok{\# install.libraries("rmdformats")}
-\KeywordTok{library}\NormalTok{(ggplot2) }\CommentTok{\# \textless{}{-} loading libraries doesn\textquotesingle{}t require double qoutations}
-\KeywordTok{library}\NormalTok{(rmdformats) }\CommentTok{\# for displaying the code in various html styles}
-\end{Highlighting}
-\end{Shaded}
+\href{https://drive.google.com/file/d/1EYdeTYf1h-wI759Ci6w2ckWNjc194LT3/view?usp=sharing}{Click here to watch Lesson 01}
 
-Before going into the ins-and-outs of coding in R, let's get familiar with
-how we can use R-markdown to create chunks of code.
+\hypertarget{whats-the-difference-between-r-and-r-studio}{%
+\subsubsection{\texorpdfstring{\emph{What's the difference between R and R-Studio?}}{What's the difference between R and R-Studio?}}\label{whats-the-difference-between-r-and-r-studio}}
+
+Both programs are able to run R.
+
+\texttt{R} is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. When you open R, you will notice that the GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+
+\texttt{R-Studio} is an add-on to R. It has many additional features that make working with the R-programming language much easier. As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons.
+
+R-Studio also has important tools for open science practices, like the ability to create notebooks that replicate your data analyses. It also has a tool for uploading your work to code-sharing platforms, like Github.
+
+But because R-Studio is an add-on program, you need to ensure R is installed on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
+
+\hypertarget{using-r-studio-exclusively}{%
+\subsection{Using R-Studio exclusively}\label{using-r-studio-exclusively}}
+
+We will only be using R-Studio for this book.
+
+\hypertarget{running-and-saving-code-in-r-studio}{%
+\section{Running and saving code in R-Studio}\label{running-and-saving-code-in-r-studio}}
+
+The Console Pane, which by default appears on the bottom-left pane in R-Studio, is the interface for entering and running code.
+
+For the purpose of your workshop, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
+
+\hypertarget{r-markdown-files}{%
+\subsection{R-Markdown Files}\label{r-markdown-files}}
+
+R-Markdown files is a document file that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+
+\hypertarget{creating-a-new-r-markdown-file}{%
+\subsection{Creating a New R-Markdown File}\label{creating-a-new-r-markdown-file}}
+
+On the top-left corner in R-Studio, select File -\textgreater{} New File -\textgreater{} R-Markdown
+
+\hypertarget{r-markdown-magic-code-chunks}{%
+\subsection{R-Markdown Magic: Code Chunks}\label{r-markdown-magic-code-chunks}}
+
+Let's get familiar with the concept of Code Chunks. Code chunks
+
+This is specific feature of markdown (.Rmd) files, meaning that
 
 \hypertarget{creating-code-chunks-in-r-markdown}{%
 \section{Creating code chunks in R-Markdown}\label{creating-code-chunks-in-r-markdown}}
 
-alt + command + i (mac)
-control + alt + i (windows)
+There are three ways to create a Code Chunk.
 
-Each chunk of code can be run individually.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  You can create a new chunk of code by typing the following:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{3} \OperatorTok{+}\StringTok{ }\DecValTok{3}
-\end{Highlighting}
-\end{Shaded}
+  ```\texttt{\{r\}}
 
-\begin{verbatim}
-## [1] 6
-\end{verbatim}
+  CODE HERE
 
-\hypertarget{running-chunnks}{%
-\section{Running chunnks}\label{running-chunnks}}
+  ```
 
-You can run the chunk of code by clicking on the green arrow to the right
-of the code.
+  The space in between the grave markers, ```\texttt{\{r\}\textasciigrave{}\ CODE\ HERE}`` is where we can write R code and calculations, such as 2 + 2.
+\item
+  You can insert a code chunk using the \texttt{+c} menu button, which appears directly above your R-Markdown document. To create a code chunk, click on the \texttt{+c} button, then select R.
+\item
+  You can also use the following keyboard shortcut
 
-Or use theses shortcuts\textless br)
-command + enter (mac)
-control + enter (windows)
-\#\# The very basics
-\#\#\$ Simple Caluations
+  \begin{itemize}
+  \item
+    alt + command + i (mac)
+  \item
+    control + alt + i (windows)
+  \end{itemize}
+\end{enumerate}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -248,6 +260,39 @@ control + enter (windows)
 ## [1] 4
 \end{verbatim}
 
+\hypertarget{running-chunks-of-code}{%
+\section{Running chunks of code}\label{running-chunks-of-code}}
+
+Now that you entered 2+ 2 in the code chunk, you can run this line of code by clicking on the green arrow to the right of the code chunk.
+
+You can also use the following shortcuts to run the code within this code chunk:
+
+command + enter (mac)
+
+control + enter (windows)
+
+\hypertarget{the-very-basics}{%
+\section{The very basics}\label{the-very-basics}}
+
+\hypertarget{simple-calculations}{%
+\subsection{Simple Calculations}\label{simple-calculations}}
+
+R works just like a calculator. You can do addition, subtraction, multiplication, etc. Here, we provide two examples, but you can experiment with calculations (+, -, *, /, \^{}, etc.) on the Console Pane.
+
+Addition
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+Division
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \DecValTok{10}\OperatorTok{/}\DecValTok{2}
@@ -258,44 +303,56 @@ control + enter (windows)
 ## [1] 5
 \end{verbatim}
 
-\hypertarget{assignment}{%
-\section{Assignment}\label{assignment}}
+\hypertarget{objects-the-assignment-operator--}{%
+\subsection{\texorpdfstring{Objects \& the Assignment Operator \texttt{\textless{}-}}{Objects \& the Assignment Operator \textless-}}\label{objects-the-assignment-operator--}}
 
-We assign values to variables by using \texttt{\textless{}-}
-Assigning a, b, and c
+Objects are the virtual space where we can temporarily store the data we load into R. When we want to load a .csv file into R, for example, we save it into an object. We can name these objects whatever we like, as long as it starts with a character string and does not contain special words or special characters that are exclusive to specific R commands or functions (more on this in later chapters).
+
+Remember the simple calculations we just did? We can store those results into an object.
+
+We do this by using the assignment operator \texttt{\textless{}-}
+
+The assignment operator is an arrow \texttt{\textless{}-} (which is the \texttt{less\ than} sign and the \texttt{dash} sign). This is also what we mean by special characters---you cannot use \texttt{\textless{}-} for any other purpose in R.
+
+Here's how it works.
+
+Lets creating objects a, b, and c
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{a \textless{}{-}}\StringTok{ }\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{2}
+\NormalTok{a \textless{}{-}}\StringTok{ }\DecValTok{2}
 \NormalTok{b \textless{}{-}}\StringTok{ }\DecValTok{10} \OperatorTok{+}\StringTok{ }\DecValTok{2}
-\NormalTok{c \textless{}{-}}\StringTok{ }\DecValTok{4} \OperatorTok{+}\StringTok{ }\DecValTok{12}
+\NormalTok{c \textless{}{-}}\StringTok{ }\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{2}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{creating-d-which-is-a-b}{%
-\section{Creating d, which is a + b}\label{creating-d-which-is-a-b}}
+\hypertarget{environment-pane-in-r-studio}{%
+\subsection{Environment Pane in R-Studio}\label{environment-pane-in-r-studio}}
+
+Notice that something happened to the environment pane. The environment name shows you the names of the objects we created. You will also see that the stored values are displayed to the right of the object name.
+
+You may have also noticed that the results of a, b, and c, did not show up anywhere other than the environment pane. This is because when we use the assignment operator, we are telling R to save the results (and not displaying them).
+
+\hypertarget{learning-your-first-function-print}{%
+\section{\texorpdfstring{Learning your first function: \texttt{print()}}{Learning your first function: print()}}\label{learning-your-first-function-print}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{d \textless{}{-}}\StringTok{ }\NormalTok{a }\OperatorTok{+}\StringTok{ }\NormalTok{b}
-\NormalTok{d}
+\KeywordTok{print}\NormalTok{(a)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 16
+## [1] 2
 \end{verbatim}
 
-\hypertarget{exploring-data}{%
-\section{\texorpdfstring{Exploring Data}{Exploring Data }}\label{exploring-data}}
+\hypertarget{objects-functions}{%
+\section{Objects \& Functions}\label{objects-functions}}
 
-\hypertarget{mtcars-data}{%
-\section{\texorpdfstring{\texttt{mtcars} data}{mtcars data}}\label{mtcars-data}}
+\hypertarget{the-data-frame-object}{%
+\subsection{The Data Frame Object}\label{the-data-frame-object}}
 
-This data is pre-installed in R, and provides a quick way to fiddle around
-with coding.
-
-We can see the data by simply typing \texttt{mtcars}
+here, I we are going to type \texttt{mtcars} in the code chunk below which is a dataframe that came pre-installed in R.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -339,7 +396,10 @@ We can see the data by simply typing \texttt{mtcars}
 ## Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
 \end{verbatim}
 
-If you want to see less rows you can use the function \texttt{head}
+\hypertarget{learning-your-first-function-in-r-str}{%
+\subsection{\texorpdfstring{Learning your first function in R: \texttt{str()}}{Learning your first function in R: str()}}\label{learning-your-first-function-in-r-str}}
+
+If you want to see less rows you can use the \texttt{head()} function.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -357,29 +417,51 @@ If you want to see less rows you can use the function \texttt{head}
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 \end{verbatim}
 
-\hypertarget{pressure-data}{%
-\section{\texorpdfstring{\texttt{pressure} data}{pressure data}}\label{pressure-data}}
-
-We can see that there are only two variables in the pressure data
+If you want to move the \texttt{mtcars} dataframe into the environment pane, you can duplicate it via the assignment command. Here, we'll save a copy of \texttt{mtcars} as \texttt{cars} and check the data using the \texttt{head()} function. Notice that I just added into the same chunk of code.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{head}\NormalTok{(pressure)}
+\NormalTok{cars \textless{}{-}}\StringTok{ }\NormalTok{mtcars}
+
+\KeywordTok{head}\NormalTok{(cars)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##   temperature pressure
-## 1           0   0.0002
-## 2          20   0.0012
-## 3          40   0.0060
-## 4          60   0.0300
-## 5          80   0.0900
-## 6         100   0.2700
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 \end{verbatim}
 
-\hypertarget{graphing-data}{%
-\section{Graphing Data}\label{graphing-data}}
+\hypertarget{view}{%
+\section{View()}\label{view}}
+
+This allows us to view the actual raw data
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{View}\NormalTok{(mtcars)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{a-note-on-arguments}{%
+\section{A Note on Arguments}\label{a-note-on-arguments}}
+
+Notice that functions in R always have () beside them
+
+head(mtcars)
+
+In R, we put our arguments (which are things the function needs to run, and/or extra things we want the function to do) inside these parentheses.
+
+\hypertarget{building-your-first-data-visualization}{%
+\chapter{Building Your First Data Visualization}\label{building-your-first-data-visualization}}
+
+\hypertarget{intro-to-plotting-and-the-ggplot-library}{%
+\chapter{Intro to plotting and the ggplot library}\label{intro-to-plotting-and-the-ggplot-library}}
 
 We can use the \texttt{plot} function to create a scatter plot for the \texttt{pressure} data
 
@@ -389,23 +471,23 @@ We can use the \texttt{plot} function to create a scatter plot for the \texttt{p
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-10-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-12-1.pdf}
 
-\hypertarget{a-note-on-arguments}{%
-\section{A Note on Arguments}\label{a-note-on-arguments}}
+\hypertarget{loading-libraries}{%
+\section{Loading Libraries}\label{loading-libraries}}
 
-Notice that functions in R always have () beside them
-head(mtcars)
-plot(pressure)
-In R, we put our arguments (which are extra things we want the argument to do)
-inside these parentheses.
+First, let's load the libraries you will use for this lesson. This is the first thing you should do when writing an R-Markdown document. That way, you ensure that you load all of the necessary libraries prior to running code
 
-\#\# Intro to ggplot library and functions
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages("ggplot2")}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
 Remember to make sure ggplot is loaded into R.
-You can do this by running the first chunk of this document, where it has the
-code \texttt{library(ggplot2)}
-We want to plot how miles per galon \texttt{mpg} is related to horsepower \texttt{hp}.
-And then we want to split this up by cylnders \texttt{cyl}.
+
+You can do this by running the first chunk of this document, where it has the code \texttt{library(ggplot2)}
 
 for ggplot, our first argument will be the dataset \texttt{mtcars}
 
@@ -415,13 +497,14 @@ for ggplot, our first argument will be the dataset \texttt{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-11-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-14-1.pdf}
 
 \hypertarget{aes-function-for-stating-your-x-and-y-axis}{%
 \section{aes() function for stating your x and y axis}\label{aes-function-for-stating-your-x-and-y-axis}}
 
-Within the ggplot() function, we'll set up our parameters by using the \texttt{aes()} function
-aes stands for asthetic. For this function, we want to define the x and y axis.
+Within the ggplot() function, we'll set up our parameters by using the \texttt{aes()} function aes stands for asthetic. For this function, we want to define the x and y axis.
+
+We want to plot how miles per galon \texttt{mpg} is related to horsepower \texttt{hp}. And then we want to split this up by cylnders \texttt{cyl}.
 
 The x-axis will be \texttt{hp} and the y-axis will be \texttt{mpg}
 
@@ -431,7 +514,7 @@ The x-axis will be \texttt{hp} and the y-axis will be \texttt{mpg}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-12-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-15-1.pdf}
 
 \hypertarget{the-power-of}{%
 \section{\texorpdfstring{The power of \texttt{+}}{The power of +}}\label{the-power-of}}
@@ -439,16 +522,13 @@ The x-axis will be \texttt{hp} and the y-axis will be \texttt{mpg}
 \hypertarget{adding-features-to-your-ggplot-graph-using}{%
 \section{\texorpdfstring{Adding features to your ggplot graph using \texttt{+}}{Adding features to your ggplot graph using +}}\label{adding-features-to-your-ggplot-graph-using}}
 
-We can add new features by using other functions that are part of the ggplot
-library.
+We can add new features by using other functions that are part of the ggplot library.
 
 We do this by using the \texttt{+} sign
 
-\#\# geom() function for stating the kind of graph you want
+\texttt{geom\_()} function, which is our geometric object, is used to state the kind of graph we want
 
-geom stands for geometric unit.
-
-Now let's use the \texttt{geom} family of functions to state what kind of graph we want.
+Now let's use the \texttt{geom\_()} family of functions to state what kind of graph we want.
 
 We want a scatterplot, so we are going to use the function \texttt{geom\_point()}
 
@@ -456,49 +536,48 @@ No arguments are required for \texttt{geom\_point()}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{ }\KeywordTok{geom\_point}\NormalTok{() }
+\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom\_point}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-13-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-16-1.pdf}
 
 \hypertarget{theme-function-for-modifying-components-of-your-graph}{%
 \section{theme() function for modifying components of your graph}\label{theme-function-for-modifying-components-of-your-graph}}
 
-let's set the size of the text by 20 using \texttt{text\ =\ element\_text(size\ =\ 20)}
+let's set the size of the text by 20 using theme(\texttt{text\ =\ element\_text(size\ =\ 20))}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}
 \StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element\_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{20}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-14-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-17-1.pdf}
 
 \hypertarget{labs-function-for-labeling-your-graph}{%
 \section{labs() function for labeling your graph}\label{labs-function-for-labeling-your-graph}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{ }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}
 \StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element\_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{20}\NormalTok{)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Horsepower"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"MPG"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-15-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-18-1.pdf}
 
 \hypertarget{scale_color_gradient-function-for-using-a-color-gradient-on-mpg}{%
 \section{scale\_color\_gradient() function for using a color gradient on mpg}\label{scale_color_gradient-function-for-using-a-color-gradient-on-mpg}}
 
 We want the low mpg to be blue and the high mpg to be red.
 
-IMPORTANT! In order to make this function work, you have to state which variable
-you want it to color. Let's color \texttt{mpg}.
+IMPORTANT! In order to make this function work, you have to state which variable you want it to color. Let's color \texttt{mpg}.
 
 In order to state this, we have to go back to the \texttt{aes()} function and write an additional argument. Remember, arguments are separated by \texttt{,}
 
@@ -506,82 +585,51 @@ So your aes code should look like this now \texttt{aes(x\ =\ hp,\ y\ =\ mpg,\ co
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg, }\DataTypeTok{color =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{ }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg, }\DataTypeTok{color =}\NormalTok{ mpg)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}
 \StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element\_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{20}\NormalTok{)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Horsepower"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"MPG"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{scale\_color\_gradient}\NormalTok{(}\DataTypeTok{low =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{high =} \StringTok{"blue"}\NormalTok{)}
+\StringTok{  }\KeywordTok{scale\_color\_gradient}\NormalTok{(}\DataTypeTok{low =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{high =} \StringTok{"green"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-16-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-19-1.pdf}
 
-\hypertarget{facet_grid-function-splitting-up-the-graph-by-a-group}{%
-\section{facet\_grid() function splitting up the graph by a group}\label{facet_grid-function-splitting-up-the-graph-by-a-group}}
+\hypertarget{facet_wrap-function-splitting-up-the-graph-by-a-group}{%
+\section{facet\_wrap() function splitting up the graph by a group}\label{facet_wrap-function-splitting-up-the-graph-by-a-group}}
 
 We want to split our graph up by the variable \texttt{cyl}
 
-use \texttt{.\textasciitilde{}cyl} to get a horizontal verison
+use \texttt{\textasciitilde{}cyl} to wrap by columns
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg, }\DataTypeTok{color =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{ }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element\_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{20}\NormalTok{)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Horsepower"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"MPG"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{scale\_color\_gradient}\NormalTok{(}\DataTypeTok{low =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{high =} \StringTok{"blue"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{facet\_grid}\NormalTok{(.}\OperatorTok{\textasciitilde{}}\NormalTok{cyl)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-17-1.pdf}
-
-use \texttt{cyl\textasciitilde{}.} to get a vertical verison.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(mtcars, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hp, }\DataTypeTok{y =}\NormalTok{ mpg, }\DataTypeTok{color =}\NormalTok{ mpg)) }\OperatorTok{+}\StringTok{ }
-\StringTok{ }\KeywordTok{geom\_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element\_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{20}\NormalTok{)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Horsepower"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"MPG"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{scale\_color\_gradient}\NormalTok{(}\DataTypeTok{low =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{high =} \StringTok{"blue"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{facet\_grid}\NormalTok{(cyl}\OperatorTok{\textasciitilde{}}\NormalTok{.)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-18-1.pdf}
+use \texttt{ncol\ =} to specify how many columns you want in your layout
 
 \hypertarget{learning-more-about-libraries-and-functions}{%
 \section{Learning More About Libraries and Functions}\label{learning-more-about-libraries-and-functions}}
 
-If you want to see more information about what you can do with a library like
-ggplot2, you can put \texttt{?} in front of the name of the library.
+If you want to see more information about what you can do with a library like ggplot2, you can put \texttt{?} in front of the name of the library.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?ggplot2}
-\end{Highlighting}
-\end{Shaded}
-
-If you want to know more about how to use a specific function
-put a ? in front of the function name
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?}\KeywordTok{ggplot}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+If you want to know more about how to use a specific function put a ? in front of the function name
 
 You can even do this with sub-functions, like \texttt{element\_text()}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?}\KeywordTok{element\_text}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{project-workflow}{%
+\chapter{Project Workflow}\label{project-workflow}}
 
+For this lesson, we'll understand how to develop an organized workflow.
 
-\backmatter
+\hypertarget{inspecting-data}{%
+\chapter{Inspecting Data}\label{inspecting-data}}
+
+\hypertarget{data-cleaning}{%
+\chapter{Data cleaning}\label{data-cleaning}}
+
+\hypertarget{descriptive-tables}{%
+\chapter{Descriptive tables}\label{descriptive-tables}}
+
+\hypertarget{visualization}{%
+\chapter{Visualization}\label{visualization}}
+
   \bibliography{book.bib,packages.bib}
 
 \end{document}

@@ -1,30 +1,90 @@
 # Grounding Concepts
 
-Agenda 1. Understand the R and R-Studio Environment 2. R Basics - Objects & Data Types 3. Getting Excited about R by Building your First Data Vizualization
+## A Quick tour of R and R-Studio
 
-Before going into the ins-and-outs of coding in R, let's get familiar with how we can use R-markdown to create chunks of code.<br>
+Please watch the first 15 minutes of the Lesson 01 workshop video, as we give you a run down of these programs what all of these panes, tabs, and buttons do.
+
+[Click here to watch Lesson 01](https://drive.google.com/file/d/1EYdeTYf1h-wI759Ci6w2ckWNjc194LT3/view?usp=sharing){.uri}
+
+#### *What's the difference between R and R-Studio?*
+
+Both programs are able to run R.
+
+`R` is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. When you open R, you will notice that the GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+
+`R-Studio` is an add-on to R. It has many additional features that make working with the R-programming language much easier. As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons.
+
+R-Studio also has important tools for open science practices, like the ability to create notebooks that replicate your data analyses. It also has a tool for uploading your work to code-sharing platforms, like Github.
+
+But because R-Studio is an add-on program, you need to ensure R is installed on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
+
+### Using R-Studio exclusively
+
+We will only be using R-Studio for this book.
+
+## Running and saving code in R-Studio
+
+The Console Pane, which by default appears on the bottom-left pane in R-Studio, is the interface for entering and running code.
+
+For the purpose of your workshop, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
+
+### R-Markdown Files
+
+R-Markdown files is a document file that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+
+### Creating a New R-Markdown File
+
+On the top-left corner in R-Studio, select File -\> New File -\> R-Markdown
+
+### R-Markdown Magic: Code Chunks
+
+Let's get familiar with the concept of Code Chunks. Code chunks
+
+This is specific feature of markdown (.Rmd) files, meaning that
 
 ## Creating code chunks in R-Markdown
 
-alt + command + i (mac)<br> control + alt + i (windows)<br>
+There are three ways to create a Code Chunk.
 
-Each chunk of code can be run individually. Notice that the output has [1], which just displays the row number
+1.  You can create a new chunk of code by typing the following:
+
+    \`\`\``{r}`
+
+    CODE HERE
+
+    \`\`\`
+
+    The space in between the grave markers, \`\`\``` {r}` CODE HERE ``\`\` is where we can write R code and calculations, such as 2 + 2.
+
+2.  You can insert a code chunk using the `+c` menu button, which appears directly above your R-Markdown document. To create a code chunk, click on the `+c` button, then select R.
+
+3.  You can also use the following keyboard shortcut
+
+    -   alt + command + i (mac)
+
+    -   control + alt + i (windows)
 
 ```{r}
-3 + 3
+2 + 2
 ```
 
-## Running chunks
+## Running chunks of code
 
-You can run the chunk of code by clicking on the green arrow to the right of the code.
+Now that you entered 2+ 2 in the code chunk, you can run this line of code by clicking on the green arrow to the right of the code chunk.
 
-Or use theses shortcuts\<br) command + enter (mac)<br> control + enter (windows) <br><br>
+You can also use the following shortcuts to run the code within this code chunk:
 
-\#\# The very basics
+command + enter (mac)
 
-\#\#\# Simple Calculations
+control + enter (windows)
 
-R works just like a fancy calculator
+## The very basics
+
+### Simple Calculations
+
+R works just like a calculator. You can do addition, subtraction, multiplication, etc. Here, we provide two examples, but you can experiment with calculations (+, -, \*, /, \^, etc.) on the Console Pane.
+
+Addition
 
 ```{r}
 2 + 2
@@ -36,100 +96,91 @@ Division
 10/2
 ```
 
-etc.
+### Objects & the Assignment Operator `<-`
 
-## Assignment Operator
+Objects are the virtual space where we can temporarily store the data we load into R. When we want to load a .csv file into R, for example, we save it into an object. We can name these objects whatever we like, as long as it starts with a character string and does not contain special words or special characters that are exclusive to specific R commands or functions (more on this in later chapters).
 
-We can assign values and the results from our calculations to an `object` by using `<-`
+Remember the simple calculations we just did? We can store those results into an object.
 
-Here, the arrow `<-` (which is the `less than` sign and the `dash` sign ) is a special assignment operator.
+We do this by using the assignment operator `<-`
 
-Here's how it works
+The assignment operator is an arrow `<-` (which is the `less than` sign and the `dash` sign). This is also what we mean by special characters---you cannot use `<-` for any other purpose in R.
+
+Here's how it works.
+
+Lets creating objects a, b, and c
 
 ```{r}
-a <- 2 + 2
+a <- 2
 b <- 10 + 2
-c <- 4 + 12
+c <- 2 + 2
 ```
 
-## Environment Pane in R-Studio
+### Environment Pane in R-Studio
 
 Notice that something happened to the environment pane. The environment name shows you the names of the objects we created. You will also see that the stored values are displayed to the right of the object name.
 
-We can use the values in the objects we stored to compute new values Creating d, which is a + b
+You may have also noticed that the results of a, b, and c, did not show up anywhere other than the environment pane. This is because when we use the assignment operator, we are telling R to save the results (and not displaying them).
+
+## Learning your first function: `print()`
 
 ```{r}
-d <- a + b
-d
+print(a)
 ```
 
-There are different types of `objects` in R, but they have one thing in common. Their purpose is to store information in order for us to use it.
+## Objects & Functions
 
-## Types of Objects
+### The Data Frame Object
 
-### Atomic Vectors (it is an array (a list) of values stored in a single dimension)
-
-Let's make one.
-
-Notice some new characters and symbols, `c` and `()` c is a function for concatenation
-
-```{r}
-twos <- c(2, 4, 6, 8)
-str(die)
-```
-
-List
-
-```{r}
-book <- list("ace", "hearts", 1)
-str(card)
-```
-
-### Matrix
-
-```{r}
-
-```
-
-### Data Frame
-
-```{r}
-str(mtcars)
-```
-
-```{r}
-str(a)
-```
-
-## Exploring Data
-
-## `mtcars` data
-
-This data is pre-installed in R, and provides a quick way to fiddle around with coding.
-
-We can see the data by simply typing `mtcars`
+here, I we are going to type `mtcars` in the code chunk below which is a dataframe that came pre-installed in R.
 
 ```{r}
 mtcars
 ```
 
-If you want to see less rows you can use the function `head`
+### Learning your first function in R: `str()`
+
+```{r}
+
+```
+
+If you want to see less rows you can use the `head()` function.
 
 ```{r}
 head(mtcars)
 ```
 
-## `pressure` data
-
-We can see that there are only two variables in the pressure data
+If you want to move the `mtcars` dataframe into the environment pane, you can duplicate it via the assignment command. Here, we'll save a copy of `mtcars` as `cars` and check the data using the `head()` function. Notice that I just added into the same chunk of code.
 
 ```{r}
-head(pressure)
+cars <- mtcars
+
+head(cars)
 ```
 
-<br><br>
+## View()
 
-## Graphing Data
+This allows us to view the actual raw data
+
+```{r}
+View(mtcars)
+```
+
+## A Note on Arguments
+
+Notice that functions in R always have () beside them
+
+head(mtcars)
+
+In R, we put our arguments (which are things the function needs to run, and/or extra things we want the function to do) inside these parentheses.
+
+```{r}
+
+```
+
+# Building Your First Data Visualization
+
+# Intro to plotting and the ggplot library
 
 We can use the `plot` function to create a scatter plot for the `pressure` data
 
@@ -137,26 +188,18 @@ We can use the `plot` function to create a scatter plot for the `pressure` data
 plot(pressure)
 ```
 
-<br><br>
-
-## A Note on Arguments
-
-Notice that functions in R always have () beside them<br> head(mtcars)<br> plot(pressure)<br> <br> In R, we put our arguments (which are extra things we want the argument to do) inside these parentheses.
-
-<br><br> \#\# Intro to ggplot library and functions
-
 ## Loading Libraries
 
 First, let's load the libraries you will use for this lesson. This is the first thing you should do when writing an R-Markdown document. That way, you ensure that you load all of the necessary libraries prior to running code
 
 ```{r}
-# install.libraries("gglot2") # <- installing libraries require double qoutations ""
-library(ggplot2) # <- loading libraries doesn't require double qoutations
+# install.packages("ggplot2")
+library(ggplot2)
 ```
 
-<br><br>
+Remember to make sure ggplot is loaded into R.
 
-Remember to make sure ggplot is loaded into R.<br> You can do this by running the first chunk of this document, where it has the code `library(ggplot2)`<br> <br> We want to plot how miles per galon `mpg` is related to horsepower `hp`. And then we want to split this up by cylnders `cyl`.<br><br>
+You can do this by running the first chunk of this document, where it has the code `library(ggplot2)`
 
 for ggplot, our first argument will be the dataset `mtcars`
 
@@ -170,13 +213,13 @@ ggplot(mtcars)
 
 Within the ggplot() function, we'll set up our parameters by using the `aes()` function aes stands for asthetic. For this function, we want to define the x and y axis.
 
+We want to plot how miles per galon `mpg` is related to horsepower `hp`. And then we want to split this up by cylnders `cyl`.
+
 The x-axis will be `hp` and the y-axis will be `mpg`
 
 ```{r}
 ggplot(mtcars, aes(x = hp, y = mpg))
 ```
-
-<br><br>
 
 ## The power of `+`
 
@@ -186,30 +229,26 @@ We can add new features by using other functions that are part of the ggplot lib
 
 We do this by using the `+` sign
 
-<br><br> \#\# geom() function for stating the kind of graph you want
+`geom_()` function, which is our geometric object, is used to state the kind of graph we want
 
-geom stands for geometric unit.<br>
+Now let's use the `geom_()` family of functions to state what kind of graph we want.
 
-Now let's use the `geom` family of functions to state what kind of graph we want.<br>
-
-We want a scatterplot, so we are going to use the function `geom_point()`<br>
+We want a scatterplot, so we are going to use the function `geom_point()`
 
 No arguments are required for `geom_point()`
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg)) + 
- geom_point() 
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point()
 ```
-
-<br><br>
 
 ## theme() function for modifying components of your graph
 
-let's set the size of the text by 20 using `text = element_text(size = 20)`
+let's set the size of the text by 20 using theme(`text = element_text(size = 20))`
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg)) + 
-  geom_point() + 
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
   theme(text = element_text(size = 20))
 ```
 
@@ -218,60 +257,48 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
 ## labs() function for labeling your graph
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg)) + 
- geom_point() + 
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
   theme(text = element_text(size = 20)) +
   labs(x = "Horsepower", y = "MPG")
 ```
-
-<br><br>
 
 ## scale\_color\_gradient() function for using a color gradient on mpg
 
 We want the low mpg to be blue and the high mpg to be red.<br>
 
-IMPORTANT! In order to make this function work, you have to state which variable you want it to color. Let's color `mpg`. <br>
+IMPORTANT! In order to make this function work, you have to state which variable you want it to color. Let's color `mpg`.
 
-In order to state this, we have to go back to the `aes()` function and write an additional argument. Remember, arguments are separated by `,`<br>
+In order to state this, we have to go back to the `aes()` function and write an additional argument. Remember, arguments are separated by `,`
 
 So your aes code should look like this now `aes(x = hp, y = mpg, color = mpg)`
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) + 
- geom_point() + 
+ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) +
+  geom_point() +
   theme(text = element_text(size = 20)) +
   labs(x = "Horsepower", y = "MPG") +
-  scale_color_gradient(low = "red", high = "blue")
+  scale_color_gradient(low = "red", high = "green")
 ```
 
 <br><br>
 
-## facet\_grid() function splitting up the graph by a group
+## facet\_wrap() function splitting up the graph by a group
 
 We want to split our graph up by the variable `cyl`<br>
 
-use `.~cyl` to get a horizontal verison
+use `~cyl` to wrap by columns
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) + 
- geom_point() + 
-  theme(text = element_text(size = 20)) +
-  labs(x = "Horsepower", y = "MPG") +
-  scale_color_gradient(low = "red", high = "blue") +
-  facet_grid(.~cyl)
+
 ```
 
 <br><br>
 
-use `cyl~.` to get a vertical verison.
+use `ncol =` to specify how many columns you want in your layout
 
 ```{r}
-ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) + 
- geom_point() + 
-  theme(text = element_text(size = 20)) +
-  labs(x = "Horsepower", y = "MPG") +
-  scale_color_gradient(low = "red", high = "blue") +
-  facet_grid(cyl~.)
+
 ```
 
 <br><br>
@@ -281,17 +308,17 @@ ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) +
 If you want to see more information about what you can do with a library like ggplot2, you can put `?` in front of the name of the library.
 
 ```{r}
-?ggplot2
+
 ```
 
-<br><br> If you want to know more about how to use a specific function put a ? in front of the function name
+If you want to know more about how to use a specific function put a ? in front of the function name
 
 ```{r}
-?ggplot()
+
 ```
 
-<br><br> You can even do this with sub-functions, like `element_text()`
+You can even do this with sub-functions, like `element_text()`
 
 ```{r}
-?element_text()
+
 ```
