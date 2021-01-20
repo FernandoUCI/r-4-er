@@ -1,5 +1,5 @@
 
-## Building Your First Data Visualization
+# Building Your First Data Visualization
 
 ### Intro to plotting and the ggplot library
 
