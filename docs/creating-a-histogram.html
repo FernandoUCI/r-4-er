@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Building Your First Data Visualization | R for Educational &amp; Psychological Research</title>
+  <title>9 Creating a Histogram | R for Educational &amp; Psychological Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Building Your First Data Visualization | R for Educational &amp; Psychological Research" />
+  <meta property="og:title" content="9 Creating a Histogram | R for Educational &amp; Psychological Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Building Your First Data Visualization | R for Educational &amp; Psychological Research" />
+  <meta name="twitter:title" content="9 Creating a Histogram | R for Educational &amp; Psychological Research" />
   
   <meta name="twitter:description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="grounding-concepts.html"/>
-<link rel="next" href="intro-to-plotting-and-the-ggplot-library.html"/>
+<link rel="prev" href="inspecting-data.html"/>
+<link rel="next" href="inspecting-data-1.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -235,16 +235,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="building-your-first-data-visualization" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Building Your First Data Visualization</h1>
+<div id="creating-a-histogram" class="section level1" number="9">
+<h1 number="9"><span class="header-section-number">9</span> Creating a Histogram</h1>
+<div id="using-ggplot-to-creat-a-histogram-of-hsgpa" class="section level2" number="9.1">
+<h2 number="9.1"><span class="header-section-number">9.1</span> Using ggplot to creat a histogram of hsgpa</h2>
+<p>Format is similar to last week’s lesson, but here were are using <code>geom_histogram()</code> instead of <code>geom_point()</code></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="creating-a-histogram.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> hsgpa)) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="creating-a-histogram.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb40-3"><a href="creating-a-histogram.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_bin</span>(<span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span></span>
+<span id="cb40-4"><a href="creating-a-histogram.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;High School GPA&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Students&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## Warning: Removed 8 rows containing non-finite values (stat_bin).
+
+## Warning: Removed 8 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="r-4-la_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="grounding-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-to-plotting-and-the-ggplot-library.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="inspecting-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inspecting-data-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

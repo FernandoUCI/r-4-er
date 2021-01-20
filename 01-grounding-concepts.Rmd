@@ -14,9 +14,9 @@ Both programs are able to run R.
 
 `R-Studio` is an add-on to R. It has many additional features that make working with the R-programming language much easier. As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons.
 
-R-Studio also has important tools for open science practices, like the ability to create notebooks that replicate your data analyses. It also has a tool for uploading your work to code-sharing platforms, like Github.
+R-Studio also has important tools that make it easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
 
-But because R-Studio is an add-on program, you need to ensure R is installed on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
+Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
 
 ### Using R-Studio exclusively
 
@@ -26,7 +26,7 @@ We will only be using R-Studio for this book.
 
 The Console Pane, which by default appears on the bottom-left pane in R-Studio, is the interface for entering and running code.
 
-For the purpose of your workshop, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
+For the purpose of this book, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
 
 ### R-Markdown Files
 
@@ -207,8 +207,6 @@ for ggplot, our first argument will be the dataset `mtcars`
 ggplot(mtcars)
 ```
 
-<br><br>
-
 ## aes() function for stating your x and y axis
 
 Within the ggplot() function, we'll set up our parameters by using the `aes()` function aes stands for asthetic. For this function, we want to define the x and y axis.
@@ -252,8 +250,6 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
   theme(text = element_text(size = 20))
 ```
 
-<br><br>
-
 ## labs() function for labeling your graph
 
 ```{r}
@@ -263,7 +259,7 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
   labs(x = "Horsepower", y = "MPG")
 ```
 
-## scale\_color\_gradient() function for using a color gradient on mpg
+## scale_color_gradient() function for using a color gradient on mpg
 
 We want the low mpg to be blue and the high mpg to be red.<br>
 
@@ -281,9 +277,7 @@ ggplot(mtcars, aes(x = hp, y = mpg, color = mpg)) +
   scale_color_gradient(low = "red", high = "green")
 ```
 
-<br><br>
-
-## facet\_wrap() function splitting up the graph by a group
+## facet_wrap() function splitting up the graph by a group
 
 We want to split our graph up by the variable `cyl`<br>
 
@@ -293,15 +287,11 @@ use `~cyl` to wrap by columns
 
 ```
 
-<br><br>
-
 use `ncol =` to specify how many columns you want in your layout
 
 ```{r}
 
 ```
-
-<br><br>
 
 ## Learning More About Libraries and Functions
 

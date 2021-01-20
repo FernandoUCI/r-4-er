@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Building Your First Data Visualization | R for Educational &amp; Psychological Research</title>
+  <title>7 Importing Data | R for Educational &amp; Psychological Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Building Your First Data Visualization | R for Educational &amp; Psychological Research" />
+  <meta property="og:title" content="7 Importing Data | R for Educational &amp; Psychological Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Building Your First Data Visualization | R for Educational &amp; Psychological Research" />
+  <meta name="twitter:title" content="7 Importing Data | R for Educational &amp; Psychological Research" />
   
   <meta name="twitter:description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="grounding-concepts.html"/>
-<link rel="next" href="intro-to-plotting-and-the-ggplot-library.html"/>
+<link rel="prev" href="more-workflow-basics.html"/>
+<link rel="next" href="inspecting-data.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -235,16 +235,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="building-your-first-data-visualization" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Building Your First Data Visualization</h1>
+<div id="importing-data" class="section level1" number="7">
+<h1 number="7"><span class="header-section-number">7</span> Importing Data</h1>
+<p>First, we want to check our working directory getwd()</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="importing-data.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/fernanr1/Documents/GitHub/r-4-er&quot;</code></pre>
+<div id="using-read.csv-to-import-data" class="section level2" number="7.1">
+<h2 number="7.1"><span class="header-section-number">7.1</span> using read.csv() to import data</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="importing-data.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df1 = data frame 1</span></span>
+<span id="cb30-2"><a href="importing-data.html#cb30-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;/Users/fernanr1/Documents/r-workshop/data/physics-course-data.csv&quot;</span>)</span></code></pre></div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="grounding-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-to-plotting-and-the-ggplot-library.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="more-workflow-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inspecting-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
