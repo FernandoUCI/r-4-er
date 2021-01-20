@@ -464,11 +464,20 @@ head(mtcars)
 
 In R, we put our arguments (which are things the function needs to run, and/or extra things we want the function to do) inside these parentheses.
 
+\hypertarget{learning-more-about-libraries-and-functions}{%
+\section{Learning More About Libraries and Functions}\label{learning-more-about-libraries-and-functions}}
+
+If you want to see more information about what you can do with a library like ggplot2, you can put \texttt{?} in front of the name of the library.
+
+If you want to know more about how to use a specific function put a ? in front of the function name
+
+You can even do this with sub-functions, like \texttt{element\_text()}
+
 \hypertarget{building-your-first-data-visualization}{%
-\chapter{Building Your First Data Visualization}\label{building-your-first-data-visualization}}
+\section{Building Your First Data Visualization}\label{building-your-first-data-visualization}}
 
 \hypertarget{intro-to-plotting-and-the-ggplot-library}{%
-\chapter{Intro to plotting and the ggplot library}\label{intro-to-plotting-and-the-ggplot-library}}
+\subsection{Intro to plotting and the ggplot library}\label{intro-to-plotting-and-the-ggplot-library}}
 
 We can use the \texttt{plot} function to create a scatter plot for the \texttt{pressure} data
 
@@ -478,12 +487,12 @@ We can use the \texttt{plot} function to create a scatter plot for the \texttt{p
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-12-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-14-1.pdf}
 
 \hypertarget{loading-libraries}{%
 \section{Loading Libraries}\label{loading-libraries}}
 
-First, let's load the libraries you will use for this lesson. This is the first thing you should do when writing an R-Markdown document. That way, you ensure that you load all of the necessary libraries prior to running code
+First, let's load the libraries you will use for this lesson. This is the first thing you should do when writing an R-Markdown document. That way, you ensure that you load all of the necessary libraries prior to running code.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -504,7 +513,7 @@ for ggplot, our first argument will be the dataset \texttt{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-14-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-16-1.pdf}
 
 \hypertarget{aes-function-for-stating-your-x-and-y-axis}{%
 \section{aes() function for stating your x and y axis}\label{aes-function-for-stating-your-x-and-y-axis}}
@@ -521,7 +530,7 @@ The x-axis will be \texttt{hp} and the y-axis will be \texttt{mpg}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-15-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-17-1.pdf}
 
 \hypertarget{the-power-of}{%
 \section{\texorpdfstring{The power of \texttt{+}}{The power of +}}\label{the-power-of}}
@@ -548,7 +557,7 @@ No arguments are required for \texttt{geom\_point()}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-16-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-18-1.pdf}
 
 \hypertarget{theme-function-for-modifying-components-of-your-graph}{%
 \section{theme() function for modifying components of your graph}\label{theme-function-for-modifying-components-of-your-graph}}
@@ -563,7 +572,7 @@ let's set the size of the text by 20 using theme(\texttt{text\ =\ element\_text(
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-17-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-19-1.pdf}
 
 \hypertarget{labs-function-for-labeling-your-graph}{%
 \section{labs() function for labeling your graph}\label{labs-function-for-labeling-your-graph}}
@@ -577,7 +586,7 @@ let's set the size of the text by 20 using theme(\texttt{text\ =\ element\_text(
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-18-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-20-1.pdf}
 
 \hypertarget{scale_color_gradient-function-for-using-a-color-gradient-on-mpg}{%
 \section{scale\_color\_gradient() function for using a color gradient on mpg}\label{scale_color_gradient-function-for-using-a-color-gradient-on-mpg}}
@@ -600,7 +609,7 @@ So your aes code should look like this now \texttt{aes(x\ =\ hp,\ y\ =\ mpg,\ co
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-19-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-21-1.pdf}
 
 \hypertarget{facet_wrap-function-splitting-up-the-graph-by-a-group}{%
 \section{facet\_wrap() function splitting up the graph by a group}\label{facet_wrap-function-splitting-up-the-graph-by-a-group}}
@@ -611,22 +620,13 @@ use \texttt{\textasciitilde{}cyl} to wrap by columns
 
 use \texttt{ncol\ =} to specify how many columns you want in your layout
 
-\hypertarget{learning-more-about-libraries-and-functions}{%
-\section{Learning More About Libraries and Functions}\label{learning-more-about-libraries-and-functions}}
-
-If you want to see more information about what you can do with a library like ggplot2, you can put \texttt{?} in front of the name of the library.
-
-If you want to know more about how to use a specific function put a ? in front of the function name
-
-You can even do this with sub-functions, like \texttt{element\_text()}
-
 \hypertarget{project-workflow}{%
 \chapter{Project Workflow}\label{project-workflow}}
 
 For this lesson, we'll understand how to develop an organized workflow.
 
 \hypertarget{load-libraries}{%
-\section{Load Libraries}\label{load-libraries}}
+\subsection{Load Libraries}\label{load-libraries}}
 
 This is the first thing you want to do when authoring R-Markdown files. For this lesson, we'll use \texttt{ggplot2}.
 
@@ -636,18 +636,15 @@ This is the first thing you want to do when authoring R-Markdown files. For this
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{more-workflow-basics}{%
-\chapter{More Workflow Basics}\label{more-workflow-basics}}
-
 \hypertarget{creating-code-chunks}{%
-\section{Creating Code Chunks}\label{creating-code-chunks}}
+\subsection{Creating Code Chunks}\label{creating-code-chunks}}
 
 For mac: alt + command + i
 
 For windows: control + alt + i
 
 \hypertarget{creating-comments}{%
-\section{Creating Comments}\label{creating-comments}}
+\subsection{Creating Comments}\label{creating-comments}}
 
 use \texttt{\#} to add comments within code chunks.
 
@@ -659,7 +656,7 @@ use \texttt{\#} to add comments within code chunks.
 \end{Shaded}
 
 \hypertarget{commenting-out-multiple-lines-of-code}{%
-\section{Commenting out multiple lines of code}\label{commenting-out-multiple-lines-of-code}}
+\subsection{Commenting out multiple lines of code}\label{commenting-out-multiple-lines-of-code}}
 
 For Mac and Windows: control + shift + c For Mac: command + shift + c
 
@@ -674,7 +671,7 @@ For Mac and Windows: control + shift + c For Mac: command + shift + c
 \end{Shaded}
 
 \hypertarget{importing-data}{%
-\chapter{Importing Data}\label{importing-data}}
+\subsection{Importing Data}\label{importing-data}}
 
 First, we want to check our working directory getwd()
 
@@ -689,7 +686,7 @@ First, we want to check our working directory getwd()
 \end{verbatim}
 
 \hypertarget{using-read.csv-to-import-data}{%
-\section{using read.csv() to import data}\label{using-read.csv-to-import-data}}
+\subsection{using read.csv() to import data}\label{using-read.csv-to-import-data}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -699,15 +696,15 @@ First, we want to check our working directory getwd()
 \end{Shaded}
 
 \hypertarget{inspecting-data}{%
-\chapter{Inspecting Data}\label{inspecting-data}}
+\section{Inspecting Data}\label{inspecting-data}}
 
 \hypertarget{types-and-classes}{%
-\section{Types and Classes}\label{types-and-classes}}
+\subsection{Types and Classes}\label{types-and-classes}}
 
 6 atomic vector types (atomic means that an object holds data of a single type) - numeric - integer - string ``a'' ``a word'' - logical: TRUE or FALSE - complex 1+4i
 
 \hypertarget{using-str-to-examine-data-structure}{%
-\section{using str() to examine data structure}\label{using-str-to-examine-data-structure}}
+\subsection{using str() to examine data structure}\label{using-str-to-examine-data-structure}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -761,7 +758,7 @@ First, we want to check our working directory getwd()
 \end{verbatim}
 
 \hypertarget{factors}{%
-\section{Factors}\label{factors}}
+\subsection{Factors}\label{factors}}
 
 Factors are variables in R which take on a limited number of different values, variables that are often referred to as categorical variables in the statistics world.
 
@@ -776,7 +773,7 @@ Factors are variables in R which take on a limited number of different values, v
 \end{verbatim}
 
 \hypertarget{use-the-view-function-actually-look-at-your-data}{%
-\section{\texorpdfstring{use the \texttt{View()} function actually look at your data}{use the View() function actually look at your data}}\label{use-the-view-function-actually-look-at-your-data}}
+\subsection{\texorpdfstring{use the \texttt{View()} function actually look at your data}{use the View() function actually look at your data}}\label{use-the-view-function-actually-look-at-your-data}}
 
 Note that all functions, like \texttt{View()} are case sensitive. Typing \texttt{view()} wont' work.
 
@@ -787,7 +784,7 @@ Note that all functions, like \texttt{View()} are case sensitive. Typing \texttt
 \end{Shaded}
 
 \hypertarget{using-summary-to-examine-data}{%
-\section{\texorpdfstring{Using \texttt{summary()} to examine data}{Using summary() to examine data}}\label{using-summary-to-examine-data}}
+\subsection{\texorpdfstring{Using \texttt{summary()} to examine data}{Using summary() to examine data}}\label{using-summary-to-examine-data}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -801,7 +798,7 @@ Note that all functions, like \texttt{View()} are case sensitive. Typing \texttt
 \end{verbatim}
 
 \hypertarget{using-table-to-examine-raw-counts}{%
-\section{\texorpdfstring{Using \texttt{table()} to examine raw counts}{Using table() to examine raw counts}}\label{using-table-to-examine-raw-counts}}
+\subsection{\texorpdfstring{Using \texttt{table()} to examine raw counts}{Using table() to examine raw counts}}\label{using-table-to-examine-raw-counts}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -830,10 +827,10 @@ Note that all functions, like \texttt{View()} are case sensitive. Typing \texttt
 \end{verbatim}
 
 \hypertarget{creating-a-histogram}{%
-\chapter{Creating a Histogram}\label{creating-a-histogram}}
+\section{Creating a Histogram}\label{creating-a-histogram}}
 
 \hypertarget{using-ggplot-to-creat-a-histogram-of-hsgpa}{%
-\section{Using ggplot to creat a histogram of hsgpa}\label{using-ggplot-to-creat-a-histogram-of-hsgpa}}
+\subsection{Using ggplot to creat a histogram of hsgpa}\label{using-ggplot-to-creat-a-histogram-of-hsgpa}}
 
 Format is similar to last week's lesson, but here were are using \texttt{geom\_histogram()} instead of \texttt{geom\_point()}
 
@@ -856,10 +853,7 @@ Format is similar to last week's lesson, but here were are using \texttt{geom\_h
 ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 \end{verbatim}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-36-1.pdf}
-
-\hypertarget{inspecting-data-1}{%
-\chapter{Inspecting Data}\label{inspecting-data-1}}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-35-1.pdf}
 
 \hypertarget{data-cleaning}{%
 \chapter{Data cleaning}\label{data-cleaning}}
