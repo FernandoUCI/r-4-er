@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Project Workflow | R for Educational &amp; Psychological Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Project Workflow | R for Educational &amp; Psychological Research" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fernando Rodriguez &amp; Hye Rin Lee" />
 
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-07-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -117,6 +119,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -143,7 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="grounding-concepts.html"><a href="grounding-concepts.html"><i class="fa fa-check"></i><b>2</b> Grounding Concepts</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio</a>
+<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio-hye-rin"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio Hye Rin</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#using-r-studio-exclusively"><i class="fa fa-check"></i><b>2.1.1</b> Using R-Studio exclusively</a></li>
 </ul></li>
@@ -230,26 +233,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="project-workflow" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Project Workflow</h1>
+<h1><span class="header-section-number">4</span> Project Workflow</h1>
 <p>For this lesson, we’ll understand how to develop an organized workflow.</p>
 <div id="load-libraries" class="section level3" number="4.0.1">
-<h3 number="4.0.1"><span class="header-section-number">4.0.1</span> Load Libraries</h3>
+<h3><span class="header-section-number">4.0.1</span> Load Libraries</h3>
 <p>This is the first thing you want to do when authoring R-Markdown files. For this lesson, we’ll use <code>ggplot2</code>.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="project-workflow.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 </div>
 <div id="creating-code-chunks" class="section level3" number="4.0.2">
-<h3 number="4.0.2"><span class="header-section-number">4.0.2</span> Creating Code Chunks</h3>
+<h3><span class="header-section-number">4.0.2</span> Creating Code Chunks</h3>
 <p>For mac: alt + command + i</p>
 <p>For windows: control + alt + i</p>
 </div>
 <div id="creating-comments" class="section level3" number="4.0.3">
-<h3 number="4.0.3"><span class="header-section-number">4.0.3</span> Creating Comments</h3>
+<h3><span class="header-section-number">4.0.3</span> Creating Comments</h3>
 <p>use <code>#</code> to add comments within code chunks.</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="project-workflow.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I can write anything here about our object a.</span></span>
 <span id="cb26-2"><a href="project-workflow.html#cb26-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co"># this is also allowed</span></span></code></pre></div>
 </div>
 <div id="commenting-out-multiple-lines-of-code" class="section level3" number="4.0.4">
-<h3 number="4.0.4"><span class="header-section-number">4.0.4</span> Commenting out multiple lines of code</h3>
+<h3><span class="header-section-number">4.0.4</span> Commenting out multiple lines of code</h3>
 <p>For Mac and Windows: control + shift + c For Mac: command + shift + c</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="project-workflow.html#cb27-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
 <span id="cb27-2"><a href="project-workflow.html#cb27-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
@@ -258,45 +261,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb27-5"><a href="project-workflow.html#cb27-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
 </div>
 <div id="importing-data" class="section level3" number="4.0.5">
-<h3 number="4.0.5"><span class="header-section-number">4.0.5</span> Importing Data</h3>
+<h3><span class="header-section-number">4.0.5</span> Importing Data</h3>
 <p>First, we want to check our working directory getwd()</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="project-workflow.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Users/fernanr1/Documents/GitHub/r-4-er&quot;</code></pre>
 </div>
 <div id="using-read.csv-to-import-data" class="section level3" number="4.0.6">
-<h3 number="4.0.6"><span class="header-section-number">4.0.6</span> using read.csv() to import data</h3>
+<h3><span class="header-section-number">4.0.6</span> using read.csv() to import data</h3>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="project-workflow.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df1 = data frame 1</span></span>
 <span id="cb30-2"><a href="project-workflow.html#cb30-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;/Users/fernanr1/Documents/r-workshop/data/physics-course-data.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="inspecting-data" class="section level2" number="4.1">
-<h2 number="4.1"><span class="header-section-number">4.1</span> Inspecting Data</h2>
+<h2><span class="header-section-number">4.1</span> Inspecting Data</h2>
 <div id="types-and-classes" class="section level3" number="4.1.1">
-<h3 number="4.1.1"><span class="header-section-number">4.1.1</span> Types and Classes</h3>
+<h3><span class="header-section-number">4.1.1</span> Types and Classes</h3>
 <p>6 atomic vector types (atomic means that an object holds data of a single type) - numeric - integer - string “a” “a word” - logical: TRUE or FALSE - complex 1+4i</p>
 </div>
 <div id="using-str-to-examine-data-structure" class="section level3" number="4.1.2">
-<h3 number="4.1.2"><span class="header-section-number">4.1.2</span> using str() to examine data structure</h3>
+<h3><span class="header-section-number">4.1.2</span> using str() to examine data structure</h3>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="project-workflow.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df1)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    158 obs. of  41 variables:
 ##  $ roster_randomid          : int  104500 104716 105751 106707 130996 133180 140533 141747 141925 143914 ...
-##  $ officialroster           : Factor w/ 2 levels &quot;NO&quot;,&quot;Yes&quot;: 2 2 2 2 2 2 2 2 2 2 ...
-##  $ ingradebookdata          : Factor w/ 1 level &quot;Yes&quot;: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ insurveyparticipatedata  : Factor w/ 1 level &quot;Yes&quot;: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ status                   : Factor w/ 1 level &quot;Enrolled&quot;: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ gender                   : Factor w/ 2 levels &quot;Female&quot;,&quot;Male&quot;: 2 2 1 1 2 1 2 2 1 1 ...
-##  $ eth2009rollupforreporting: Factor w/ 5 levels &quot;Asian / Pacific Islander&quot;,..: 2 1 1 1 4 1 1 3 4 5 ...
-##  $ agegroup                 : Factor w/ 8 levels &quot;18&quot;,&quot;19&quot;,&quot;20&quot;,..: 2 2 2 6 5 3 2 3 3 2 ...
-##  $ lowincomeflag            : Factor w/ 3 levels &quot;N&quot;,&quot;NAT&quot;,&quot;Y&quot;: 3 1 3 3 3 1 3 1 1 1 ...
-##  $ fulltimestatus           : Factor w/ 2 levels &quot;Full-time&quot;,&quot;Part-time&quot;: 1 2 2 2 2 2 2 2 2 1 ...
-##  $ firstgenerationflag      : Factor w/ 4 levels &quot;MDT&quot;,&quot;N&quot;,&quot;NAT&quot;,..: 2 2 4 4 4 4 4 2 2 2 ...
-##  $ homeprimarylang          : Factor w/ 4 levels &quot;English only&quot;,..: 2 1 2 2 4 2 4 4 2 1 ...
-##  $ admissionsstatusdetail   : Factor w/ 3 levels &quot;Freshman&quot;,&quot;Not applicable&quot;,..: 1 1 1 3 3 1 1 1 1 1 ...
+##  $ officialroster           : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
+##  $ ingradebookdata          : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
+##  $ insurveyparticipatedata  : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
+##  $ status                   : chr  &quot;Enrolled&quot; &quot;Enrolled&quot; &quot;Enrolled&quot; &quot;Enrolled&quot; ...
+##  $ gender                   : chr  &quot;Male&quot; &quot;Male&quot; &quot;Female&quot; &quot;Female&quot; ...
+##  $ eth2009rollupforreporting: chr  &quot;Hispanic&quot; &quot;Asian / Pacific Islander&quot; &quot;Asian / Pacific Islander&quot; &quot;Asian / Pacific Islander&quot; ...
+##  $ agegroup                 : chr  &quot;19&quot; &quot;19&quot; &quot;19&quot; &quot;23&quot; ...
+##  $ lowincomeflag            : chr  &quot;Y&quot; &quot;N&quot; &quot;Y&quot; &quot;Y&quot; ...
+##  $ fulltimestatus           : chr  &quot;Full-time&quot; &quot;Part-time&quot; &quot;Part-time&quot; &quot;Part-time&quot; ...
+##  $ firstgenerationflag      : chr  &quot;N&quot; &quot;N&quot; &quot;Y&quot; &quot;Y&quot; ...
+##  $ homeprimarylang          : chr  &quot;English/non-English&quot; &quot;English only&quot; &quot;English/non-English&quot; &quot;English/non-English&quot; ...
+##  $ admissionsstatusdetail   : chr  &quot;Freshman&quot; &quot;Freshman&quot; &quot;Freshman&quot; &quot;Transfer&quot; ...
 ##  $ hsgpa                    : num  4 4.07 3.95 NA NA ...
 ##  $ transfergpa              : num  NA NA NA 3.28 3.14 ...
-##  $ firstregacadyr           : Factor w/ 5 levels &quot;2009-10&quot;,&quot;2012-13&quot;,..: 4 4 4 4 5 4 4 4 4 5 ...
-##  $ firstregacadterm         : Factor w/ 1 level &quot;Fall&quot;: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ major1                   : Factor w/ 26 levels &quot;Anthropology&quot;,..: 4 15 4 20 4 4 4 4 4 1 ...
-##  $ post_ts                  : Factor w/ 118 levels &quot;7/22/16 13:24&quot;,..: 98 60 103 47 68 44 76 50 100 67 ...
+##  $ firstregacadyr           : chr  &quot;2014-15&quot; &quot;2014-15&quot; &quot;2014-15&quot; &quot;2014-15&quot; ...
+##  $ firstregacadterm         : chr  &quot;Fall&quot; &quot;Fall&quot; &quot;Fall&quot; &quot;Fall&quot; ...
+##  $ major1                   : chr  &quot;Biological Sciences&quot; &quot;Pharmaceutical Sciences&quot; &quot;Biological Sciences&quot; &quot;Public Health Sciences&quot; ...
+##  $ post_ts                  : chr  &quot;7/25/16 19:47&quot; &quot;7/22/16 23:31&quot; &quot;7/25/16 21:33&quot; &quot;7/22/16 18:18&quot; ...
 ##  $ post_study               : int  3 8 17 10 15 7 10 8 15 18 ...
 ##  $ post_er1                 : int  2 2 2 3 3 3 2 2 1 3 ...
 ##  $ post_er2                 : int  4 3 3 3 3 3 4 2 5 5 ...
@@ -318,27 +321,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  $ homework                 : int  105 103 103 NA 93 104 104 99 99 94 ...
 ##  $ finalexam                : int  82 61 80 NA 64 87 98 90 84 45 ...
 ##  $ grade_finalscore         : num  89 77.9 88.8 33.3 79.3 ...
-##  $ grade_lettergrade        : Factor w/ 12 levels &quot;A&quot;,&quot;A-&quot;,&quot;A+&quot;,..: 2 4 2 12 4 1 3 1 2 5 ...</code></pre>
+##  $ grade_lettergrade        : chr  &quot;A-&quot; &quot;B&quot; &quot;A-&quot; &quot;F&quot; ...</code></pre>
 </div>
 <div id="factors" class="section level3" number="4.1.3">
-<h3 number="4.1.3"><span class="header-section-number">4.1.3</span> Factors</h3>
+<h3><span class="header-section-number">4.1.3</span> Factors</h3>
 <p>Factors are variables in R which take on a limited number of different values, variables that are often referred to as categorical variables in the statistics world.</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="project-workflow.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df1<span class="sc">$</span>agegroup)</span></code></pre></div>
-<pre><code>##  Factor w/ 8 levels &quot;18&quot;,&quot;19&quot;,&quot;20&quot;,..: 2 2 2 6 5 3 2 3 3 2 ...</code></pre>
+<pre><code>##  chr [1:158] &quot;19&quot; &quot;19&quot; &quot;19&quot; &quot;23&quot; &quot;22&quot; &quot;20&quot; &quot;19&quot; &quot;20&quot; &quot;20&quot; &quot;19&quot; &quot;20&quot; &quot;21&quot; ...</code></pre>
 </div>
 <div id="use-the-view-function-actually-look-at-your-data" class="section level3" number="4.1.4">
-<h3 number="4.1.4"><span class="header-section-number">4.1.4</span> use the <code>View()</code> function actually look at your data</h3>
+<h3><span class="header-section-number">4.1.4</span> use the <code>View()</code> function actually look at your data</h3>
 <p>Note that all functions, like <code>View()</code> are case sensitive. Typing <code>view()</code> wont’ work.</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="project-workflow.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(df1)</span></code></pre></div>
 </div>
 <div id="using-summary-to-examine-data" class="section level3" number="4.1.5">
-<h3 number="4.1.5"><span class="header-section-number">4.1.5</span> Using <code>summary()</code> to examine data</h3>
+<h3><span class="header-section-number">4.1.5</span> Using <code>summary()</code> to examine data</h3>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="project-workflow.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df1<span class="sc">$</span>hsgpa)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
 ##   3.160   3.910   4.040   4.003   4.147   4.400       8</code></pre>
 </div>
 <div id="using-table-to-examine-raw-counts" class="section level3" number="4.1.6">
-<h3 number="4.1.6"><span class="header-section-number">4.1.6</span> Using <code>table()</code> to examine raw counts</h3>
+<h3><span class="header-section-number">4.1.6</span> Using <code>table()</code> to examine raw counts</h3>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="project-workflow.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df1<span class="sc">$</span>hsgpa)</span></code></pre></div>
 <pre><code>## 
 ## 3.1600001      3.29       3.3 3.3599999 3.3900001 3.4200001      3.52      3.55 
@@ -360,9 +363,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="creating-a-histogram" class="section level2" number="4.2">
-<h2 number="4.2"><span class="header-section-number">4.2</span> Creating a Histogram</h2>
+<h2><span class="header-section-number">4.2</span> Creating a Histogram</h2>
 <div id="using-ggplot-to-creat-a-histogram-of-hsgpa" class="section level3" number="4.2.1">
-<h3 number="4.2.1"><span class="header-section-number">4.2.1</span> Using ggplot to creat a histogram of hsgpa</h3>
+<h3><span class="header-section-number">4.2.1</span> Using ggplot to creat a histogram of hsgpa</h3>
 <p>Format is similar to last week’s lesson, but here were are using <code>geom_histogram()</code> instead of <code>geom_point()</code></p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="project-workflow.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> hsgpa)) <span class="sc">+</span></span>
 <span id="cb40-2"><a href="project-workflow.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
@@ -406,6 +409,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

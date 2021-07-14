@@ -1,1 +1,10 @@
 # Data cleaning
+
+
+Testing testing 1 2 3
+
+```{r}
+objecta <- 2 + 2
+print(objecta)
+```
+

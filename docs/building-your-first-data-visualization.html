@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Building Your First Data Visualization | R for Educational &amp; Psychological Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Building Your First Data Visualization | R for Educational &amp; Psychological Research" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fernando Rodriguez &amp; Hye Rin Lee" />
 
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-07-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -117,6 +119,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -143,7 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="grounding-concepts.html"><a href="grounding-concepts.html"><i class="fa fa-check"></i><b>2</b> Grounding Concepts</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio</a>
+<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio-hye-rin"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio Hye Rin</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#using-r-studio-exclusively"><i class="fa fa-check"></i><b>2.1.1</b> Using R-Studio exclusively</a></li>
 </ul></li>
@@ -230,15 +233,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="building-your-first-data-visualization" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Building Your First Data Visualization</h1>
+<h1><span class="header-section-number">3</span> Building Your First Data Visualization</h1>
 <div id="intro-to-plotting-and-the-ggplot-library" class="section level3" number="3.0.1">
-<h3 number="3.0.1"><span class="header-section-number">3.0.1</span> Intro to plotting and the ggplot library</h3>
+<h3><span class="header-section-number">3.0.1</span> Intro to plotting and the ggplot library</h3>
 <p>We can use the <code>plot</code> function to create a scatter plot for the <code>pressure</code> data</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="building-your-first-data-visualization.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pressure)</span></code></pre></div>
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="loading-libraries" class="section level2" number="3.1">
-<h2 number="3.1"><span class="header-section-number">3.1</span> Loading Libraries</h2>
+<h2><span class="header-section-number">3.1</span> Loading Libraries</h2>
 <p>First, let’s load the libraries you will use for this lesson. This is the first thing you should do when writing an R-Markdown document. That way, you ensure that you load all of the necessary libraries prior to running code.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="building-your-first-data-visualization.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;ggplot2&quot;)</span></span>
 <span id="cb18-2"><a href="building-your-first-data-visualization.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
@@ -249,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 <div id="aes-function-for-stating-your-x-and-y-axis" class="section level2" number="3.2">
-<h2 number="3.2"><span class="header-section-number">3.2</span> aes() function for stating your x and y axis</h2>
+<h2><span class="header-section-number">3.2</span> aes() function for stating your x and y axis</h2>
 <p>Within the ggplot() function, we’ll set up our parameters by using the <code>aes()</code> function aes stands for asthetic. For this function, we want to define the x and y axis.</p>
 <p>We want to plot how miles per galon <code>mpg</code> is related to horsepower <code>hp</code>. And then we want to split this up by cylnders <code>cyl</code>.</p>
 <p>The x-axis will be <code>hp</code> and the y-axis will be <code>mpg</code></p>
@@ -257,10 +260,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="the-power-of" class="section level2" number="3.3">
-<h2 number="3.3"><span class="header-section-number">3.3</span> The power of <code>+</code></h2>
+<h2><span class="header-section-number">3.3</span> The power of <code>+</code></h2>
 </div>
 <div id="adding-features-to-your-ggplot-graph-using" class="section level2" number="3.4">
-<h2 number="3.4"><span class="header-section-number">3.4</span> Adding features to your ggplot graph using <code>+</code></h2>
+<h2><span class="header-section-number">3.4</span> Adding features to your ggplot graph using <code>+</code></h2>
 <p>We can add new features by using other functions that are part of the ggplot library.</p>
 <p>We do this by using the <code>+</code> sign</p>
 <p><code>geom_()</code> function, which is our geometric object, is used to state the kind of graph we want</p>
@@ -272,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="theme-function-for-modifying-components-of-your-graph" class="section level2" number="3.5">
-<h2 number="3.5"><span class="header-section-number">3.5</span> theme() function for modifying components of your graph</h2>
+<h2><span class="header-section-number">3.5</span> theme() function for modifying components of your graph</h2>
 <p>let’s set the size of the text by 20 using theme(<code>text = element_text(size = 20))</code></p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="building-your-first-data-visualization.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="building-your-first-data-visualization.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
@@ -280,7 +283,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="labs-function-for-labeling-your-graph" class="section level2" number="3.6">
-<h2 number="3.6"><span class="header-section-number">3.6</span> labs() function for labeling your graph</h2>
+<h2><span class="header-section-number">3.6</span> labs() function for labeling your graph</h2>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="building-your-first-data-visualization.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
 <span id="cb23-2"><a href="building-your-first-data-visualization.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb23-3"><a href="building-your-first-data-visualization.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="sc">+</span></span>
@@ -288,7 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="scale_color_gradient-function-for-using-a-color-gradient-on-mpg" class="section level2" number="3.7">
-<h2 number="3.7"><span class="header-section-number">3.7</span> scale_color_gradient() function for using a color gradient on mpg</h2>
+<h2><span class="header-section-number">3.7</span> scale_color_gradient() function for using a color gradient on mpg</h2>
 <p>We want the low mpg to be blue and the high mpg to be red.<br></p>
 <p>IMPORTANT! In order to make this function work, you have to state which variable you want it to color. Let’s color <code>mpg</code>.</p>
 <p>In order to state this, we have to go back to the <code>aes()</code> function and write an additional argument. Remember, arguments are separated by <code>,</code></p>
@@ -301,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="r-4-la_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 <div id="facet_wrap-function-splitting-up-the-graph-by-a-group" class="section level2" number="3.8">
-<h2 number="3.8"><span class="header-section-number">3.8</span> facet_wrap() function splitting up the graph by a group</h2>
+<h2><span class="header-section-number">3.8</span> facet_wrap() function splitting up the graph by a group</h2>
 <p>We want to split our graph up by the variable <code>cyl</code><br></p>
 <p>use <code>~cyl</code> to wrap by columns</p>
 <p>use <code>ncol =</code> to specify how many columns you want in your layout</p>
@@ -337,6 +340,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
