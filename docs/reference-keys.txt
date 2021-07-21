@@ -52,5 +52,5 @@ using-table-to-examine-raw-counts
 creating-a-histogram
 using-ggplot-to-creat-a-histogram-of-hsgpa
 data-cleaning
-visualization
+more-data-cleaning
 descriptive-tables

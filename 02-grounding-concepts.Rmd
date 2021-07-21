@@ -18,9 +18,23 @@ R-Studio also has important tools that make it easy to implement open science pr
 
 Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
 
-### Using R-Studio exclusively
+We will use R-Studio exclusively for this book.
 
-We will only be using R-Studio for this book.
+When you open R-Studio, you will see the following 3 panes
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('images-figures/02-default-pane.png')
+```
+
+The `Console` pane is where you can type in lines of R code. This pane will also output the results from your code. For the sake of this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('images-figures/02-new-project.png')
+```
+
+```{r}
+
+```
 
 ## Running and saving code in R-Studio
 
@@ -173,8 +187,6 @@ Notice that functions in R always have () beside them
 head(mtcars)
 
 In R, we put our arguments (which are things the function needs to run, and/or extra things we want the function to do) inside these parentheses.
-
-
 
 ## Learning More About Libraries and Functions
 
