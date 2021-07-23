@@ -66,7 +66,7 @@ Instead, you can run:
 install.packages("tidyverse")
 
 # opening library
-library("tidyverse")
+library(tidyverse)
 ```
 This shortcut allows you to the same packages (or libraries) as the code chunk above. 
 
