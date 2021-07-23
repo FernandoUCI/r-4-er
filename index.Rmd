@@ -1,6 +1,6 @@
 ---
-title: "R for Educational & Psychological Research"
-author: "Fernando Rodriguez & Hye Rin Lee"
+title: "RStudio for Educational and Psychological Research"
+author: "Fernando Rodriguez and Hye Rin Lee"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -12,13 +12,13 @@ description: "This book will teach you how to use the R programming language for
 
 # Introduction
 
-We are looking forward to introducing you to the wonderful world of R.
+We are looking forward to introducing you to the wonderful world of RStudio.
 
-R is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that R is completely free. Other advantages include the ability to work with different datasets simultaneously, good version control features, tools for sharing reproducible code, and an amazing library for visualizing data.
+RStudio is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that RStudio is completely free as opposed to paying a fee. Other advantages include the ability to work with different datasets simultaneously, good version control features, tools for sharing reproducible code, and an amazing library for visualizing data.
 
-The downside of using R is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get R to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.
+The downside of using RStudio is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get RStudio to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.
 
-The goal of this book is to ease you into learning how to program in R. What makes this book different from others is that we assume you have zero experience with using R (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible. The book will also guide you through the entire process of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use R on your own research project from start to finish.
+The goal of this book is to ease you into learning how to program in RStudio. What makes this book different from others is that we assume you have zero experience with using RStudio (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible. Moreover, the book will guide you through the entire process from start to finish of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use R on your own research project from start to finish.
 
 As you work your way through the chapters, you will find that programming in R is much easier than it looks. Even more exciting, once you get a good sense of some of the basics, you will soon begin tinkering with code and trying things just for the sake of trying things out. That's where the real fun starts.
 
