@@ -1,6 +1,4 @@
-# Grounding Concepts
-
-## A Quick tour of R and R-Studio 
+# Installing R and R Studio
 
 Please watch the first 15 minutes of the Lesson 01 workshop video, as we give you a run down of these programs what all of these panes, tabs, and buttons do.
 

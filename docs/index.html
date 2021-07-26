@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>RStudio for Educational and Psychological Research</title>
+  <title>Learning R and R-Studio for Education and Social Science Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="RStudio for Educational and Psychological Research" />
+  <meta property="og:title" content="Learning R and R-Studio for Education and Social Science Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="RStudio for Educational and Psychological Research" />
+  <meta name="twitter:title" content="Learning R and R-Studio for Education and Social Science Research" />
   
   <meta name="twitter:description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RStudio for Educational and Psychological Research</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Learning R and R-Studio for Education and Social Science Research</a>
           </h1>
         </div>
 
@@ -213,31 +213,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">RStudio for Educational and Psychological Research</h1>
+<h1 class="title">Learning R and R-Studio for Education and Social Science Research</h1>
 <p class="author"><em>Fernando Rodriguez and Hye Rin Lee</em></p>
 <p class="date" style="margin-top: 1.5em;"><em>2021-07-26</em></p>
 </div>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>We are looking forward to introducing you to the wonderful world of RStudio.</p>
-<p>RStudio is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that RStudio is completely free as opposed to paying a fee. Other advantages include the ability to work with different datasets simultaneously, good version control features, tools for sharing reproducible code, and an amazing library for visualizing data.</p>
-<p>The downside of using RStudio is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get RStudio to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.</p>
-<p>The goal of this book is to ease you into learning how to program in RStudio. What makes this book different from others is that we assume you have zero experience with using RStudio (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible. Moreover, the book will guide you through the entire process of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use RStudio on your own research project from start to finish.</p>
-<p>As you work your way through the chapters, you will find that programming in RStudio is much easier than it looks. Even more exciting, once you get a good sense of some of the basics, you will soon begin tinkering with code and try things just for the sake of trying things out. That’s where the real fun starts.</p>
+<p>We are looking forward to introducing you to the wonderful world of R and RStudio.</p>
+<p>R is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that R is completely free as opposed to paying a fee. Another great feature about R is that there are several add-on programs, such as the R-Studio, which helps us better manage multiple datasets at the same time and share reproducible code.</p>
+<p>The downside of using RStudio is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get R to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.</p>
+<p>The goal of this book is to ease you into learning how to program in R and use the RStudio program to optimize your data workflow. What makes this book different from others is that we assume you have zero experience with using R and RStudio (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible. Moreover, the book will guide you through the entire process of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use R and RStudio on your own research project from start to finish.</p>
+<p>As you work your way through the chapters, you will find that programming in R is much easier than it looks. You will also appreciate how R-Studio helps us manage research projects. Even more exciting, once you get a good sense of some of the basics, you will soon begin tinkering with code and try things just for the sake of trying things out. That’s where the real fun starts.</p>
 <div id="who-is-this-book-for" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Who is this book for?</h2>
-<p>We wrote this book for people who do education and/or psychological research, who are at various levels in their careers, and who want a easy-to-follow book for learning RStudio. This includes undergraduate lab assistants who are conducting research for the first time, graduate students, faculty, and seasoned researchers who know how to use SPSS or Stata, but want to branch out to and further expand their skills.</p>
-<p>While no experience with RStudio or coding is necessary, we do assume that you have a basic understanding of research methods and statistics.</p>
+<p>We wrote this book for people who do education and/or psychological research, who are at various levels in their careers, and who want a easy-to-follow book for learning R and RStudio. This includes undergraduate lab assistants who are conducting research for the first time, graduate students, faculty, and seasoned researchers who know how to use SPSS or Stata, but want to branch out to and further expand their skills.</p>
+<p>While no experience with R or RStudio or coding is necessary, we do assume that you have a basic understanding of research methods and statistics.</p>
 </div>
 <div id="structure-of-the-book" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Structure of the book</h2>
-<p>This book consists of three parts. <code>Part I</code> walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the RStudio programming language, as well as popular libraries. Libraries refer to a suite of features we can use in RStudio, but are not part of the main RStudio program. Finally, because we want you to see the immediate appeal of using RStudio, you will also write your first data visualization code.</p>
+<p>This book consists of three parts. <code>Part I</code> walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the R programming language, as well as popular libraries. Libraries refer to a suite of features we can use in R, but are not part of the main R program. Finally, because we want you to see the immediate appeal of using R and RStudio, you will also write your first data visualization code.</p>
 <p><code>Part II</code> will guide you through importing, inspecting, and exploring your data. It is here you will learn all about the ‘tidy’ method for working with data. This ‘tidy’ method was developed by Hadley Wickham along with the RStudio team, and it refers to a principles for working with data.</p>
 <p><code>Part III</code> will help you understand how to conduct inferential statistics, and…..</p>
 </div>
 <div id="additional-resources" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Additional resources</h2>
-<p>While is this book provides a general introduction to using RStudio, we don’t cover everything we think you should know about RStudio, so we recommend that you refer the following books:</p>
+<p>While is this book provides a general introduction to using R and RStudio, we don’t cover everything we think you should know about RStudio, so we recommend that you refer the following books:</p>
 </div>
 <div id="about-the-authors" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> About the authors</h2>
@@ -246,7 +246,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="acknowledgments" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> Acknowledgments</h2>
-<p>We would like to thank the National Science Foundation (Grant Number 1535300) for the supporting our work.</p>
+<p>We would like to thank the National Science Foundation (Grant Number 1535300) and the Institute for Education Sciences (Grant Number R305B210006) for supporting the development of this book.</p>
 
 </div>
 </div>
