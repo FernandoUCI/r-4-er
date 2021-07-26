@@ -18,7 +18,7 @@ We will start with working with the *tidyverse* library. The *tidyverse* library
 Another way to get more information about each of these libraries is through putting a `?` in front of library name. Lets try finding more information about the library, *ggplot2*, which is a library within *tidyverse*. 
 
 The first step involves making sure the library *ggplot2* is installed. 
-```{r}
+```{r, eval = FALSE}
 install.packages("ggplot2") # you can replace whatever is in the parentheses with another library name 
 ```
 If RStudio asks, "Do you want to install from sources the package which needs compilation? (Yes/no/cancel)," you should write yes on the console. This step of downloading libraries only needs to be done once—just like how you only need to download the app once on your smart phone. You can also add a number/hashtag sign to comment inside your code chunk. This number/hashtag sign tells RStudio to not run whatever is after the number/hashtag sign. 
@@ -38,7 +38,7 @@ This step should be completed only after completing steps 1 and 2. However, you 
 [INSERT SCREENSHOT HERE?]
 
 Because *tidyverse* is a collection of packages, one cool information is that you do not need to necessarily install all of the libraries separately (i.e., ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats). For instance, you do not need to run:
-```{r}
+```{r, eval = FALSE}
 # downloading libraries
 install.packages("ggplot2")
 install.packages("dplyr")
@@ -61,10 +61,12 @@ library(forcats)
 ```
 
 Instead, you can run:
-```{r}
+```{r, eval = FALSE}
 # downloading library
 install.packages("tidyverse")
+```
 
+```{r}
 # opening library
 library(tidyverse)
 ```
@@ -102,7 +104,6 @@ The only difference between the code above and this code is the addition of pch 
 
 Using the same dataset, `mtcars`, we will use *ggplot2* to graph a scatterplot. As mentioned in the “Introducing the *Tidyverse* Library” section, we want to make sure that our library, *ggplot2* is downloaded and loaded.
 ```{r}
-install.packages("ggplot2") 
 library("ggplot2")
 ```
 

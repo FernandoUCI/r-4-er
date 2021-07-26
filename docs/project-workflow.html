@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Project Workflow | R for Educational &amp; Psychological Research</title>
+  <title>4 Project Workflow | RStudio for Educational and Psychological Research</title>
   <meta name="description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Project Workflow | R for Educational &amp; Psychological Research" />
+  <meta property="og:title" content="4 Project Workflow | RStudio for Educational and Psychological Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,22 +16,22 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Project Workflow | R for Educational &amp; Psychological Research" />
+  <meta name="twitter:title" content="4 Project Workflow | RStudio for Educational and Psychological Research" />
   
   <meta name="twitter:description" content="This book will teach you how to use the R programming language for education and psychological sciences." />
   
 
-<meta name="author" content="Fernando Rodriguez &amp; Hye Rin Lee" />
+<meta name="author" content="Fernando Rodriguez and Hye Rin Lee" />
 
 
-<meta name="date" content="2021-07-15" />
+<meta name="date" content="2021-07-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="building-your-first-data-visualization.html"/>
+<link rel="prev" href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"/>
 <link rel="next" href="data-cleaning.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -146,10 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="grounding-concepts.html"><a href="grounding-concepts.html"><i class="fa fa-check"></i><b>2</b> Grounding Concepts</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio-hye-rin"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio Hye Rin</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#using-r-studio-exclusively"><i class="fa fa-check"></i><b>2.1.1</b> Using R-Studio exclusively</a></li>
-</ul></li>
+<li class="chapter" data-level="2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-quick-tour-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1</b> A Quick tour of R and R-Studio</a></li>
 <li class="chapter" data-level="2.2" data-path="grounding-concepts.html"><a href="grounding-concepts.html#running-and-saving-code-in-r-studio"><i class="fa fa-check"></i><b>2.2</b> Running and saving code in R-Studio</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="grounding-concepts.html"><a href="grounding-concepts.html#r-markdown-files"><i class="fa fa-check"></i><b>2.2.1</b> R-Markdown Files</a></li>
@@ -174,17 +171,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.9" data-path="grounding-concepts.html"><a href="grounding-concepts.html#a-note-on-arguments"><i class="fa fa-check"></i><b>2.9</b> A Note on Arguments</a></li>
 <li class="chapter" data-level="2.10" data-path="grounding-concepts.html"><a href="grounding-concepts.html#learning-more-about-libraries-and-functions"><i class="fa fa-check"></i><b>2.10</b> Learning More About Libraries and Functions</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html"><i class="fa fa-check"></i><b>3</b> Building Your First Data Visualization</a>
+<li class="chapter" data-level="3" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><i class="fa fa-check"></i><b>3</b> Introducing Libraries + Building Your First Data Visualization Using <em>base-R</em> vs. A Library</a>
 <ul>
-<li class="chapter" data-level="3.0.1" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#intro-to-plotting-and-the-ggplot-library"><i class="fa fa-check"></i><b>3.0.1</b> Intro to plotting and the ggplot library</a></li>
-<li class="chapter" data-level="3.1" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#loading-libraries"><i class="fa fa-check"></i><b>3.1</b> Loading Libraries</a></li>
-<li class="chapter" data-level="3.2" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#aes-function-for-stating-your-x-and-y-axis"><i class="fa fa-check"></i><b>3.2</b> aes() function for stating your x and y axis</a></li>
-<li class="chapter" data-level="3.3" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#the-power-of"><i class="fa fa-check"></i><b>3.3</b> The power of <code>+</code></a></li>
-<li class="chapter" data-level="3.4" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#adding-features-to-your-ggplot-graph-using"><i class="fa fa-check"></i><b>3.4</b> Adding features to your ggplot graph using <code>+</code></a></li>
-<li class="chapter" data-level="3.5" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#theme-function-for-modifying-components-of-your-graph"><i class="fa fa-check"></i><b>3.5</b> theme() function for modifying components of your graph</a></li>
-<li class="chapter" data-level="3.6" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#labs-function-for-labeling-your-graph"><i class="fa fa-check"></i><b>3.6</b> labs() function for labeling your graph</a></li>
-<li class="chapter" data-level="3.7" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#scale_color_gradient-function-for-using-a-color-gradient-on-mpg"><i class="fa fa-check"></i><b>3.7</b> scale_color_gradient() function for using a color gradient on mpg</a></li>
-<li class="chapter" data-level="3.8" data-path="building-your-first-data-visualization.html"><a href="building-your-first-data-visualization.html#facet_wrap-function-splitting-up-the-graph-by-a-group"><i class="fa fa-check"></i><b>3.8</b> facet_wrap() function splitting up the graph by a group</a></li>
+<li class="chapter" data-level="3.1" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html#about-libraries"><i class="fa fa-check"></i><b>3.1</b> About Libraries</a></li>
+<li class="chapter" data-level="3.2" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html#introducing-the-tidyverse-library"><i class="fa fa-check"></i><b>3.2</b> Introducing the <em>Tidyverse</em> Library</a></li>
+<li class="chapter" data-level="3.3" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html#creating-your-first-data-visualization-using-base-r-vs.-ggplot2"><i class="fa fa-check"></i><b>3.3</b> Creating Your First Data Visualization Using base-R vs. ggplot2</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html#creating-a-scatterplot-using-base-r"><i class="fa fa-check"></i><b>3.3.1</b> Creating a Scatterplot Using <em>base-r</em></a></li>
+<li class="chapter" data-level="3.3.2" data-path="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html"><a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html#creating-a-scatterplot-using-ggplot2"><i class="fa fa-check"></i><b>3.3.2</b> Creating a Scatterplot Using <em>ggplot2</em></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="project-workflow.html"><a href="project-workflow.html"><i class="fa fa-check"></i><b>4</b> Project Workflow</a>
 <ul>
@@ -192,21 +187,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.0.2" data-path="project-workflow.html"><a href="project-workflow.html#creating-code-chunks"><i class="fa fa-check"></i><b>4.0.2</b> Creating Code Chunks</a></li>
 <li class="chapter" data-level="4.0.3" data-path="project-workflow.html"><a href="project-workflow.html#creating-comments"><i class="fa fa-check"></i><b>4.0.3</b> Creating Comments</a></li>
 <li class="chapter" data-level="4.0.4" data-path="project-workflow.html"><a href="project-workflow.html#commenting-out-multiple-lines-of-code"><i class="fa fa-check"></i><b>4.0.4</b> Commenting out multiple lines of code</a></li>
-<li class="chapter" data-level="4.0.5" data-path="project-workflow.html"><a href="project-workflow.html#importing-data"><i class="fa fa-check"></i><b>4.0.5</b> Importing Data</a></li>
-<li class="chapter" data-level="4.0.6" data-path="project-workflow.html"><a href="project-workflow.html#using-read.csv-to-import-data"><i class="fa fa-check"></i><b>4.0.6</b> using read.csv() to import data</a></li>
-<li class="chapter" data-level="4.1" data-path="project-workflow.html"><a href="project-workflow.html#inspecting-data"><i class="fa fa-check"></i><b>4.1</b> Inspecting Data</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="project-workflow.html"><a href="project-workflow.html#types-and-classes"><i class="fa fa-check"></i><b>4.1.1</b> Types and Classes</a></li>
-<li class="chapter" data-level="4.1.2" data-path="project-workflow.html"><a href="project-workflow.html#using-str-to-examine-data-structure"><i class="fa fa-check"></i><b>4.1.2</b> using str() to examine data structure</a></li>
-<li class="chapter" data-level="4.1.3" data-path="project-workflow.html"><a href="project-workflow.html#factors"><i class="fa fa-check"></i><b>4.1.3</b> Factors</a></li>
-<li class="chapter" data-level="4.1.4" data-path="project-workflow.html"><a href="project-workflow.html#use-the-view-function-actually-look-at-your-data"><i class="fa fa-check"></i><b>4.1.4</b> use the <code>View()</code> function actually look at your data</a></li>
-<li class="chapter" data-level="4.1.5" data-path="project-workflow.html"><a href="project-workflow.html#using-summary-to-examine-data"><i class="fa fa-check"></i><b>4.1.5</b> Using <code>summary()</code> to examine data</a></li>
-<li class="chapter" data-level="4.1.6" data-path="project-workflow.html"><a href="project-workflow.html#using-table-to-examine-raw-counts"><i class="fa fa-check"></i><b>4.1.6</b> Using <code>table()</code> to examine raw counts</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="project-workflow.html"><a href="project-workflow.html#creating-a-histogram"><i class="fa fa-check"></i><b>4.2</b> Creating a Histogram</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="project-workflow.html"><a href="project-workflow.html#using-ggplot-to-creat-a-histogram-of-hsgpa"><i class="fa fa-check"></i><b>4.2.1</b> Using ggplot to creat a histogram of hsgpa</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-cleaning.html"><a href="data-cleaning.html"><i class="fa fa-check"></i><b>5</b> Data cleaning</a></li>
 <li class="chapter" data-level="6" data-path="more-data-cleaning.html"><a href="more-data-cleaning.html"><i class="fa fa-check"></i><b>6</b> More Data Cleaning</a></li>
@@ -224,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for Educational &amp; Psychological Research</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RStudio for Educational and Psychological Research</a>
           </h1>
         </div>
 
@@ -238,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="load-libraries" class="section level3" number="4.0.1">
 <h3><span class="header-section-number">4.0.1</span> Load Libraries</h3>
 <p>This is the first thing you want to do when authoring R-Markdown files. For this lesson, we’ll use <code>ggplot2</code>.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="project-workflow.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="project-workflow.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 </div>
 <div id="creating-code-chunks" class="section level3" number="4.0.2">
 <h3><span class="header-section-number">4.0.2</span> Creating Code Chunks</h3>
@@ -248,136 +228,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="creating-comments" class="section level3" number="4.0.3">
 <h3><span class="header-section-number">4.0.3</span> Creating Comments</h3>
 <p>use <code>#</code> to add comments within code chunks.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="project-workflow.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I can write anything here about our object a.</span></span>
-<span id="cb26-2"><a href="project-workflow.html#cb26-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co"># this is also allowed</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="project-workflow.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I can write anything here about our object a.</span></span>
+<span id="cb38-2"><a href="project-workflow.html#cb38-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co"># this is also allowed</span></span></code></pre></div>
 </div>
 <div id="commenting-out-multiple-lines-of-code" class="section level3" number="4.0.4">
 <h3><span class="header-section-number">4.0.4</span> Commenting out multiple lines of code</h3>
 <p>For Mac and Windows: control + shift + c For Mac: command + shift + c</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="project-workflow.html#cb27-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
-<span id="cb27-2"><a href="project-workflow.html#cb27-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
-<span id="cb27-3"><a href="project-workflow.html#cb27-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
-<span id="cb27-4"><a href="project-workflow.html#cb27-4" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
-<span id="cb27-5"><a href="project-workflow.html#cb27-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
-</div>
-<div id="importing-data" class="section level3" number="4.0.5">
-<h3><span class="header-section-number">4.0.5</span> Importing Data</h3>
-<p>First, we want to check our working directory getwd()</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="project-workflow.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;/Users/fernanr1/Documents/GitHub/r-4-er&quot;</code></pre>
-</div>
-<div id="using-read.csv-to-import-data" class="section level3" number="4.0.6">
-<h3><span class="header-section-number">4.0.6</span> using read.csv() to import data</h3>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="project-workflow.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df1 = data frame 1</span></span>
-<span id="cb30-2"><a href="project-workflow.html#cb30-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;/Users/fernanr1/Documents/r-workshop/data/physics-course-data.csv&quot;</span>)</span></code></pre></div>
-</div>
-<div id="inspecting-data" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Inspecting Data</h2>
-<div id="types-and-classes" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Types and Classes</h3>
-<p>6 atomic vector types (atomic means that an object holds data of a single type) - numeric - integer - string “a” “a word” - logical: TRUE or FALSE - complex 1+4i</p>
-</div>
-<div id="using-str-to-examine-data-structure" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> using str() to examine data structure</h3>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="project-workflow.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df1)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    158 obs. of  41 variables:
-##  $ roster_randomid          : int  104500 104716 105751 106707 130996 133180 140533 141747 141925 143914 ...
-##  $ officialroster           : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
-##  $ ingradebookdata          : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
-##  $ insurveyparticipatedata  : chr  &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; &quot;Yes&quot; ...
-##  $ status                   : chr  &quot;Enrolled&quot; &quot;Enrolled&quot; &quot;Enrolled&quot; &quot;Enrolled&quot; ...
-##  $ gender                   : chr  &quot;Male&quot; &quot;Male&quot; &quot;Female&quot; &quot;Female&quot; ...
-##  $ eth2009rollupforreporting: chr  &quot;Hispanic&quot; &quot;Asian / Pacific Islander&quot; &quot;Asian / Pacific Islander&quot; &quot;Asian / Pacific Islander&quot; ...
-##  $ agegroup                 : chr  &quot;19&quot; &quot;19&quot; &quot;19&quot; &quot;23&quot; ...
-##  $ lowincomeflag            : chr  &quot;Y&quot; &quot;N&quot; &quot;Y&quot; &quot;Y&quot; ...
-##  $ fulltimestatus           : chr  &quot;Full-time&quot; &quot;Part-time&quot; &quot;Part-time&quot; &quot;Part-time&quot; ...
-##  $ firstgenerationflag      : chr  &quot;N&quot; &quot;N&quot; &quot;Y&quot; &quot;Y&quot; ...
-##  $ homeprimarylang          : chr  &quot;English/non-English&quot; &quot;English only&quot; &quot;English/non-English&quot; &quot;English/non-English&quot; ...
-##  $ admissionsstatusdetail   : chr  &quot;Freshman&quot; &quot;Freshman&quot; &quot;Freshman&quot; &quot;Transfer&quot; ...
-##  $ hsgpa                    : num  4 4.07 3.95 NA NA ...
-##  $ transfergpa              : num  NA NA NA 3.28 3.14 ...
-##  $ firstregacadyr           : chr  &quot;2014-15&quot; &quot;2014-15&quot; &quot;2014-15&quot; &quot;2014-15&quot; ...
-##  $ firstregacadterm         : chr  &quot;Fall&quot; &quot;Fall&quot; &quot;Fall&quot; &quot;Fall&quot; ...
-##  $ major1                   : chr  &quot;Biological Sciences&quot; &quot;Pharmaceutical Sciences&quot; &quot;Biological Sciences&quot; &quot;Public Health Sciences&quot; ...
-##  $ post_ts                  : chr  &quot;7/25/16 19:47&quot; &quot;7/22/16 23:31&quot; &quot;7/25/16 21:33&quot; &quot;7/22/16 18:18&quot; ...
-##  $ post_study               : int  3 8 17 10 15 7 10 8 15 18 ...
-##  $ post_er1                 : int  2 2 2 3 3 3 2 2 1 3 ...
-##  $ post_er2                 : int  4 3 3 3 3 3 4 2 5 5 ...
-##  $ post_er3                 : int  2 3 2 3 3 3 2 1 3 1 ...
-##  $ post_er4                 : int  4 3 3 3 3 3 4 4 3 4 ...
-##  $ post_activ1              : int  1 1 2 2 3 4 3 2 4 6 ...
-##  $ post_activ2              : int  2 0 0 4 2 0 0 0 0 0 ...
-##  $ post_activ3              : int  0 0 0 NA 2 0 0 0 0 0 ...
-##  $ post_activ4              : int  1 0 0 3 1 0 0 NA 1 0 ...
-##  $ post_activ5              : int  2 7 1 1 1 2 5 7 4 2 ...
-##  $ post_activ6              : int  0 0 0 1 1 0 0 0 0 0 ...
-##  $ post_activ7              : int  0 1 1 2 3 3 0 0 1 0 ...
-##  $ post_aca1                : int  2 1 1 2 1 2 1 1 2 2 ...
-##  $ post_aca2                : int  1 1 1 1 1 1 1 1 2 1 ...
-##  $ post_aca3                : int  1 2 1 1 1 1 3 1 1 1 ...
-##  $ post_aca4                : int  1 3 1 1 1 2 4 1 2 1 ...
-##  $ post_aca5                : int  1 1 1 NA 1 1 1 1 2 1 ...
-##  $ quizzes                  : num  90.4 82.2 92.9 0 85.8 ...
-##  $ homework                 : int  105 103 103 NA 93 104 104 99 99 94 ...
-##  $ finalexam                : int  82 61 80 NA 64 87 98 90 84 45 ...
-##  $ grade_finalscore         : num  89 77.9 88.8 33.3 79.3 ...
-##  $ grade_lettergrade        : chr  &quot;A-&quot; &quot;B&quot; &quot;A-&quot; &quot;F&quot; ...</code></pre>
-</div>
-<div id="factors" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Factors</h3>
-<p>Factors are variables in R which take on a limited number of different values, variables that are often referred to as categorical variables in the statistics world.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="project-workflow.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df1<span class="sc">$</span>agegroup)</span></code></pre></div>
-<pre><code>##  chr [1:158] &quot;19&quot; &quot;19&quot; &quot;19&quot; &quot;23&quot; &quot;22&quot; &quot;20&quot; &quot;19&quot; &quot;20&quot; &quot;20&quot; &quot;19&quot; &quot;20&quot; &quot;21&quot; ...</code></pre>
-</div>
-<div id="use-the-view-function-actually-look-at-your-data" class="section level3" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> use the <code>View()</code> function actually look at your data</h3>
-<p>Note that all functions, like <code>View()</code> are case sensitive. Typing <code>view()</code> wont’ work.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="project-workflow.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(df1)</span></code></pre></div>
-</div>
-<div id="using-summary-to-examine-data" class="section level3" number="4.1.5">
-<h3><span class="header-section-number">4.1.5</span> Using <code>summary()</code> to examine data</h3>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="project-workflow.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df1<span class="sc">$</span>hsgpa)</span></code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##   3.160   3.910   4.040   4.003   4.147   4.400       8</code></pre>
-</div>
-<div id="using-table-to-examine-raw-counts" class="section level3" number="4.1.6">
-<h3><span class="header-section-number">4.1.6</span> Using <code>table()</code> to examine raw counts</h3>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="project-workflow.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df1<span class="sc">$</span>hsgpa)</span></code></pre></div>
-<pre><code>## 
-## 3.1600001      3.29       3.3 3.3599999 3.3900001 3.4200001      3.52      3.55 
-##         1         1         1         1         1         1         1         1 
-## 3.5999999 3.6500001 3.6900001       3.7      3.71      3.76      3.77      3.78 
-##         2         1         1         1         1         1         2         2 
-##      3.79       3.8 3.8099999 3.8299999 3.8499999 3.8599999 3.8699999 3.8800001 
-##         1         2         1         1         3         2         1         1 
-## 3.9000001 3.9100001 3.9200001      3.95      3.96      3.99         4      4.04 
-##         4         4         1         7         1         1        25         9 
-## 4.0500002 4.0599999 4.0700002 4.0799999 4.0900002 4.0999999 4.1100001 4.1199999 
-##         4         2         4         5         7         1         1         1 
-## 4.1300001 4.1399999 4.1500001 4.1700001 4.1799998 4.1900001 4.1999998      4.21 
-##         3         1         2         3         8         1         2         1 
-## 4.2199998      4.25 4.2600002      4.27      4.29 4.3000002 4.3099999 4.3299999 
-##         4         3         2         2         1         3         1         1 
-## 4.3499999 4.3600001 4.4000001 
-##         1         2         1</code></pre>
-</div>
-</div>
-<div id="creating-a-histogram" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Creating a Histogram</h2>
-<div id="using-ggplot-to-creat-a-histogram-of-hsgpa" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Using ggplot to creat a histogram of hsgpa</h3>
-<p>Format is similar to last week’s lesson, but here were are using <code>geom_histogram()</code> instead of <code>geom_point()</code></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="project-workflow.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> hsgpa)) <span class="sc">+</span></span>
-<span id="cb40-2"><a href="project-workflow.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb40-3"><a href="project-workflow.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_bin</span>(<span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span></span>
-<span id="cb40-4"><a href="project-workflow.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;High School GPA&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Students&quot;</span>)</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<pre><code>## Warning: Removed 8 rows containing non-finite values (stat_bin).
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="project-workflow.html#cb39-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb39-2"><a href="project-workflow.html#cb39-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb39-3"><a href="project-workflow.html#cb39-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb39-4"><a href="project-workflow.html#cb39-4" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb39-5"><a href="project-workflow.html#cb39-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
 
-## Warning: Removed 8 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="r-4-la_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
-
-</div>
 </div>
 </div>
             </section>
@@ -385,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="building-your-first-data-visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introducing-libraries-building-your-first-data-visualization-using-base-r-vs-a-library.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="data-cleaning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
