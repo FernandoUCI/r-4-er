@@ -118,7 +118,7 @@
 
 \title{Learning R and R-Studio for Education and Social Science Research}
 \author{Fernando Rodriguez and Hye Rin Lee}
-\date{2021-07-26}
+\date{2021-07-27}
 
 \begin{document}
 \maketitle
@@ -132,18 +132,20 @@
 
 We are looking forward to introducing you to the wonderful world of R and RStudio.
 
-R is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that R is completely free as opposed to paying a fee. Another great feature about R is that there are several add-on programs, such as the R-Studio, which helps us better manage multiple datasets at the same time and share reproducible code.
+R is a very powerful statistical programming language that has several advantages over using Stata or SPSS. The most obvious is that R is completely free. Another great feature about R is that there are several add-on programs, such as the R-Studio, which helps us better manage multiple datasets at the same time and share reproducible code.
 
-The downside of using RStudio is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get R to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.
+The downside of using R is that it almost exclusively code-based, meaning that there are very limited point-and-click features. In order to get R to perform an analysis or plot a figure, you have to write several lines of code, which can feel like a big barrier if you are unfamiliar with programming concepts.
 
-The goal of this book is to ease you into learning how to program in R and use the RStudio program to optimize your data workflow. What makes this book different from others is that we assume you have zero experience with using R and RStudio (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible. Moreover, the book will guide you through the entire process of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use R and RStudio on your own research project from start to finish.
+The goal of this book is to ease you into learning how to program in R and use RStudio to optimize your data workflow. What makes this book different from others is that we assume you have zero experience with using R and RStudio (and are also a bit intimidated by learning it!), so everything is explained as straightforward as possible.
+
+Moreover, the book will guide you through the entire process of analyzing educational data obtained from an online STEM course. This includes importing, inspecting, making decisions about your sample size, generating descriptive data, creating data visualizations, and using inferential statistics to draw conclusions from your sample. By the end of this book, you will have the necessary proficiency to use R and RStudio on your own research project from start to finish.
 
 As you work your way through the chapters, you will find that programming in R is much easier than it looks. You will also appreciate how R-Studio helps us manage research projects. Even more exciting, once you get a good sense of some of the basics, you will soon begin tinkering with code and try things just for the sake of trying things out. That's where the real fun starts.
 
 \hypertarget{who-is-this-book-for}{%
 \section{Who is this book for?}\label{who-is-this-book-for}}
 
-We wrote this book for people who do education and/or psychological research, who are at various levels in their careers, and who want a easy-to-follow book for learning R and RStudio. This includes undergraduate lab assistants who are conducting research for the first time, graduate students, faculty, and seasoned researchers who know how to use SPSS or Stata, but want to branch out to and further expand their skills.
+We wrote this book for people who do education or social science research, who are at various levels in their careers, and who want a easy-to-follow book for learning R and RStudio. This includes undergraduate lab assistants who are conducting research for the first time, graduate students, faculty, and seasoned researchers who know how to use SPSS or Stata, but want to branch out to and expand their skills.
 
 While no experience with R or RStudio or coding is necessary, we do assume that you have a basic understanding of research methods and statistics.
 
@@ -173,78 +175,67 @@ Hye Rin Lee is a doctoral candidate in the School of Education at the University
 
 We would like to thank the National Science Foundation (Grant Number 1535300) and the Institute for Education Sciences (Grant Number R305B210006) for supporting the development of this book.
 
-\hypertarget{grounding-concepts}{%
-\chapter{Grounding Concepts}\label{grounding-concepts}}
+\hypertarget{installation}{%
+\chapter{Installation}\label{installation}}
 
-\hypertarget{a-quick-tour-of-r-and-r-studio}{%
-\section{A Quick tour of R and R-Studio}\label{a-quick-tour-of-r-and-r-studio}}
+The first thing we will do is install the R and R-Studio programs. Before, we begin, however, we let's quickly explain the difference between R and R-Studio. First, let's start with R.
 
-Please watch the first 15 minutes of the Lesson 01 workshop video, as we give you a run down of these programs what all of these panes, tabs, and buttons do.
+\texttt{R} is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files.
 
-\href{https://drive.google.com/file/d/1EYdeTYf1h-wI759Ci6w2ckWNjc194LT3/view?usp=sharing}{Click here to watch Lesson 01}
+\hypertarget{r}{%
+\section{R}\label{r}}
 
-\hypertarget{whats-the-difference-between-r-and-r-studio}{%
-\subsubsection{\texorpdfstring{\emph{What's the difference between R and R-Studio?}}{What's the difference between R and R-Studio?}}\label{whats-the-difference-between-r-and-r-studio}}
+To install R, visit the Comprehensive R Archive Network website, which can be found here (\url{https://cran.r-project.org/}). You can right click on this link and select open in new tab.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(tidyverse) }
-\end{Highlighting}
-\end{Shaded}
+You have the option of downloading R for Linux, MacOS, or Windows. This information is typically the first set of links (see image).
 
-\begin{verbatim}
-## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
-\end{verbatim}
+\includegraphics[width=1\linewidth]{images-figures/02-r-website}
 
-\begin{verbatim}
-## v ggplot2 3.3.3     v purrr   0.3.4
-## v tibble  3.0.5     v dplyr   1.0.3
-## v tidyr   1.1.2     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.0
-\end{verbatim}
+If you are have trouble finding your way around the Comprehensive R Archive Network website, you can watch the following video.
 
-\begin{verbatim}
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-\end{verbatim}
+Watch: How do download R
 
-Both programs are able to run R.
+After downloading and installing R, open the program. The image below shows the Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
 
-\texttt{R} is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. When you open R, you will notice that the GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+\includegraphics[width=1\linewidth]{images-figures/02-r-programs}
 
-\texttt{R-Studio} is an add-on to R. It has many additional features that make working with the R-programming language much easier. As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons.
+\hypertarget{r-studio}{%
+\section{R-Studio}\label{r-studio}}
 
-R-Studio also has important tools that make it easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
+\texttt{R-Studio} also runs the R programming language. However, it has several features that make is easier to code in R.
 
-Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
+For instance, it is very easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
 
-We will use R-Studio exclusively for this book.
+Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in R-Studio.
 
-When you open R-Studio, you will see the following 3 panes
+Please use the following link to download R-Studio
+https://www.rstudio.com/products/rstudio/download/\#downloads
 
-\includegraphics[width=1\linewidth]{images-figures/02-default-pane}
+If you are having trouble finding your way around the R-Studio website, you an watch the following video.
+Watch: How do download R-Studio
 
-The \texttt{Console} pane is where you can type in lines of R code. This pane will also output the results from your code. For the sake of this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary.
+After downloading and installing R-Studio, open the program. It should look like this.
 
-\includegraphics[width=1\linewidth]{images-figures/02-new-project}
+\includegraphics[width=1\linewidth]{images-figures/02-r-studio-gui}
 
-\hypertarget{running-and-saving-code-in-r-studio}{%
-\section{Running and saving code in R-Studio}\label{running-and-saving-code-in-r-studio}}
+\hypertarget{more-on-the-r-studio-gui}{%
+\subsection{More on the R-Studio GUI}\label{more-on-the-r-studio-gui}}
 
-The Console Pane, which by default appears on the bottom-left pane in R-Studio, is the interface for entering and running code.
+As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons. The \texttt{Console} (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary.
 
-For the purpose of this book, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
+The \texttt{Environment} pane will display stored datasets. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as \texttt{plots}, \texttt{packages}, \texttt{help}, and \texttt{viewer}. We will cover purpose of these tabs later in the book.
+
+Finally, the \texttt{Files} pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in R-Studio, the displayed files defaults to where the project has been saved (more on this later). The \texttt{History} tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about \texttt{packages}, \texttt{plots}, \texttt{help}, and \texttt{viewer} later on.
 
 \hypertarget{r-markdown-files}{%
 \subsection{R-Markdown Files}\label{r-markdown-files}}
 
-R-Markdown files is a document file that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
 
 \hypertarget{creating-a-new-r-markdown-file}{%
 \subsection{Creating a New R-Markdown File}\label{creating-a-new-r-markdown-file}}
 
-On the top-left corner in R-Studio, select File -\textgreater{} New File -\textgreater{} R-Markdown
+On the top-left corner in R-Studio, select File -\textgreater{} New File -\textgreater{} R-Markdown.
 
 \hypertarget{r-markdown-magic-code-chunks}{%
 \subsection{R-Markdown Magic: Code Chunks}\label{r-markdown-magic-code-chunks}}
@@ -595,6 +586,23 @@ Instead, you can run:
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+\end{verbatim}
+
+\begin{verbatim}
+## v tibble  3.0.5     v dplyr   1.0.3
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.0
+## v purrr   0.3.4
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
 This shortcut allows you to the same packages (or libraries) as the code chunk above.
 
 \hypertarget{creating-your-first-data-visualization-using-base-r-vs.-ggplot2}{%
@@ -624,7 +632,7 @@ Then we can use the \texttt{plot} function to create the scatterplot. We have to
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-25-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-24-1.pdf}
 This code allowed us to create a scatterplot where the x-axis is horsepower and the y-axis is MPG (i.e., miles per gallon). The format of the code is plot(variable name of x-axis, variable name of y-axis, xlab = ``x-axis title label'', ylab = ``y-axis of title label'').
 
 Using the \texttt{plot} function, you can also change the plotting symbols. For example, you can make the plotting symbol a non-filled rectangle, a non-filled circle, an X, a medium-sized filled circle, etc. To receive a full-chart on all the possibilities in \emph{base-r}, see the following resource: \url{http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r}. You can also include or exclude the boarder around the scatterplot. Lets try creating a scatterplot with a medium-sized filled circle with no boarders around the edges.
@@ -637,7 +645,7 @@ Using the \texttt{plot} function, you can also change the plotting symbols. For 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-26-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-25-1.pdf}
 The only difference between the code above and this code is the addition of pch = 19 and frame = FALSE. pch = 19 refers to creating a scatterplot with a medium-sized filled circle and frame = FALSE refers to creating a scatterplot with no boarders.
 
 \hypertarget{creating-a-scatterplot-using-ggplot2}{%
@@ -660,7 +668,7 @@ Then similar to the scatterplot we made using \emph{base-r}, we will plot how mi
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-28-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-27-1.pdf}
 
 You can also add new by using other functions that are part of the ggplot library. We can add functions by using the \texttt{+}.
 
@@ -673,7 +681,7 @@ Lets try using the \texttt{geom()} function to state the kind of graph we want t
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-29-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-28-1.pdf}
 
 We can also change the size of the text. For example, we will use the \texttt{theme} function to change the size of the text to size 20.
 
@@ -685,7 +693,7 @@ We can also change the size of the text. For example, we will use the \texttt{th
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-30-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-29-1.pdf}
 
 Moreover, we can use the \texttt{labs} function to label our x- and y-axis.
 
@@ -698,7 +706,7 @@ Moreover, we can use the \texttt{labs} function to label our x- and y-axis.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-31-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-30-1.pdf}
 
 Another function that you can do with \emph{ggplot2} is add a color gradient on a specific variable. For example, lets say that you want low MPG to be blue and high MPG to be red. In order to make this function work, we have to (1) state which variable you want to color, which in this case, is MPG and (2) go back to the \texttt{aes} function and write an additional argument. All arguments are separated by \texttt{,}.
 
@@ -712,7 +720,7 @@ Another function that you can do with \emph{ggplot2} is add a color gradient on 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-32-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-31-1.pdf}
 
 Finally, we will go over the function, \texttt{facet\_grid}, which allows you to create graphs by a group. Lets try creating a scatterplot split by the variable, \texttt{cyl} (i.e., the number of cylinders).
 
@@ -727,7 +735,7 @@ Finally, we will go over the function, \texttt{facet\_grid}, which allows you to
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-33-1.pdf}
+\includegraphics{r-4-la_files/figure-latex/unnamed-chunk-32-1.pdf}
 
 \hypertarget{project-workflow}{%
 \chapter{Project Workflow}\label{project-workflow}}

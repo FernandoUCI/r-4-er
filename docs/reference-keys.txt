@@ -4,10 +4,10 @@ structure-of-the-book
 additional-resources
 about-the-authors
 acknowledgments
-grounding-concepts
-a-quick-tour-of-r-and-r-studio
-whats-the-difference-between-r-and-r-studio
-running-and-saving-code-in-r-studio
+installation
+r
+r-studio
+more-on-the-r-studio-gui
 r-markdown-files
 creating-a-new-r-markdown-file
 r-markdown-magic-code-chunks
@@ -38,6 +38,3 @@ commenting-out-multiple-lines-of-code
 data-cleaning
 more-data-cleaning
 descriptive-tables
-installation-and-grounding-concepts
-installing-r
-installing-r-studio

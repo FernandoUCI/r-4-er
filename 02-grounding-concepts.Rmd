@@ -1,9 +1,11 @@
-# Installation and Grounding Concepts
+# Installation
 
-The first thing we will do is install the R and R-Studio programs. 
+The first thing we will do is install the R and R-Studio programs. Before, we begin, however, we let's quickly explain the difference between R and R-Studio. First, let's start with R.
 
-## Installing R
-To install R, you will need to visit the Comprehensive R Archive Network website, which can be found here <a href="https://cran.r-project.org/" target="_blank">(https://cran.r-project.org/)</a>. You can right click on this link and select <i>open in new tab</i>.
+`R` is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. 
+
+## R
+To install R, visit the Comprehensive R Archive Network website, which can be found here <a href="https://cran.r-project.org/" target="_blank">(https://cran.r-project.org/)</a>. You can right click on this link and select <i>open in new tab</i>.
 
 You have the option of downloading R for Linux, MacOS, or Windows. This information is typically the first set of links (see image).
 ```{r echo=FALSE, out.width='100%'}
@@ -14,12 +16,18 @@ If you are have trouble finding your way around the Comprehensive R Archive Netw
 
 <a href="https://drive.google.com/file/d/1WGmdTNg9cmffq89UGMMLvz0UwBNWAwf0/view?usp=sharing" target="_blank">Watch: How do download R</a>
 
-After downloading and installing R, open the program. It should look like this. This windows versision is on the left and the Mac version is on the right.
+After downloading and installing R, open the program. The image below shows the Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('images-figures/02-r-programs.png')
 ```
 
-## Installing R-Studio 
+## R-Studio 
+
+`R-Studio` also runs the R programming language. However, it has several features that make is easier to code in R.
+
+For instance, it is very easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
+
+Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in R-Studio.
 
 Please use the following link to download R-Studio
 <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#downloads</a>
@@ -27,51 +35,26 @@ Please use the following link to download R-Studio
 If you are having trouble finding your way around the R-Studio website, you an watch the following video. 
 <a href="https://drive.google.com/file/d/11U9VhHL40X8E0J3NfG3mw9v1ltoFUV_J/view?usp=sharing" target="_blank">Watch: How do download R-Studio</a>
 
-After downloading and installing R-Studio, open the program. It should look like this.
+After downloading and installing R-Studio, open the program. It should look like this. 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('images-figures/02-r-studio-gui.png')
 ```
 
-#### *What's the difference between R and R-Studio?*
+### More on the R-Studio GUI
 
-Both programs are able to run R.
+As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons. The `Console` (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
 
-`R` is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. When you open R, you will notice that the GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+The `Environment` pane will display stored datasets. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as `plots`, `packages`, `help`, and `viewer`. We will cover purpose of these tabs later in the book. 
 
-`R-Studio` is an add-on to R. It has many additional features that make working with the R-programming language much easier. As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons.
+Finally, the `Files` pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in R-Studio, the displayed files defaults to where the project has been saved (more on this later). The `History` tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about `packages`, `plots`, `help`, and `viewer` later on. 
 
-R-Studio also has important tools that make it easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
-
-Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language, so there is no need to open the R program.
-
-We will use R-Studio exclusively for this book.
-
-When you open R-Studio, you will see the following 3 panes
-
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('images-figures/02-default-pane.png')
-```
-
-The `Console` pane is where you can type in lines of R code. This pane will also output the results from your code. For the sake of this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
-
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('images-figures/02-new-project.png')
-```
-
-
-## Running and saving code in R-Studio
-
-The Console Pane, which by default appears on the bottom-left pane in R-Studio, is the interface for entering and running code.
-
-For the purpose of this book, we will use the console to do quick data calculations, data checks, and experiment with code. We will primarily use R-Studio to write and execute our code, especially as it pertains to creating a data notebook.
 
 ### R-Markdown Files
-
-R-Markdown files is a document file that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
 
 ### Creating a New R-Markdown File
+On the top-left corner in R-Studio, select File -\> New File -\> R-Markdown. 
 
-On the top-left corner in R-Studio, select File -\> New File -\> R-Markdown
 
 ### R-Markdown Magic: Code Chunks
 
