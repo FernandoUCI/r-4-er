@@ -38,3 +38,6 @@ commenting-out-multiple-lines-of-code
 data-cleaning
 more-data-cleaning
 descriptive-tables
+installation-and-grounding-concepts
+installing-r
+installing-r-studio
