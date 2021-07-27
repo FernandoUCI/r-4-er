@@ -2,7 +2,11 @@
 
 ## About Libraries 
 
-As we mentioned in the first chapter, one of the largest advantage of RStudio is that it is free. How? One of the main reasons is that scientists from all over the world contribute to the software—making their code open access. In order to access, other researchers’ packages, you have to install what is called a library. A library is like downloading various apps on your phone. Even though your phone comes with a camera app when you first purchase your iPhone (or any other smart phone), many of us who like to post on Instagram or just want good photos might download other camera or photo-related apps, such as Huji, Focos, Snow, etc. using the App Store (or Google Play Store) because these apps provide more functions compared to the original camera app. For example, although you can edit your photos using the basic camera app on your iPhone, such as crop or use certain filters, you cannot get the same vintage vibe as taking a picture using the Huji app. Translating this to RStudio language, *base R* is like the software of your smart phone with the basic apps installed from purchase, whereas *libraries* are the apps you can download from either the App Store or Google Play Store (depending on what phone you have). 
+As we mentioned in the first chapter, the main advantage of R and RStudio is that it is free. How? One of the main reasons is that scientists from all over the world contribute to the software—making their code open access. In order to access other researchers’ packages, you have to install what is called a library. 
+
+A library is similar to downloading various apps on your phone. Even though your phone comes with a camera app when you first purchase your iPhone (or any other smart phone), many of us who like to post on Instagram or just want good photos might download other camera or photo-related apps, such as Huji, Focos, Snow, etc. using the App Store (or Google Play Store) because these apps provide more functions compared to the original camera app. 
+
+For example, although you can edit your photos using the basic camera app on your iPhone, such as crop or use certain filters, you cannot get the same vintage vibe as taking a picture using the Huji app. Translating this to RStudio language, *base R* is like the software of your smart phone with the basic apps installed from purchase, whereas *libraries* are the apps you can download from either the App Store or Google Play Store (depending on what phone you have). 
 
 To take advantage of these different "apps" that have been created by scholars across the world, we have to download the "app." Downloading the app, you will use the following code:
 install.packages(LIBRARY NAME)
@@ -33,9 +37,11 @@ The last step is to add a `?` in front of library name.
 ```{r}
 ?ggplot2 # you can replace ggplot2 with any other library name
 ```
-This step should be completed only after completing steps 1 and 2. However, you do not have to necessarily complete this step to use the library, in this case, ggplot2. The third step just allows you to see more information about the package. 
+This step should be completed only after completing steps 1 and 2. However, you do not have to necessarily complete this step to use the library, in this case, ggplot2. The third step just allows you to see more information about the package.  
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('images-figures/03-ggplot2.png')
+```
 
-[INSERT SCREENSHOT HERE?]
 
 Because *tidyverse* is a collection of packages, one cool information is that you do not need to necessarily install all of the libraries separately (i.e., ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats). For instance, you do not need to run:
 ```{r, eval = FALSE}

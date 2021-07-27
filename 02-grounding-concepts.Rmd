@@ -1,6 +1,6 @@
-# Installation
+# Intalling R and RStudio
 
-The first thing we will do is install the R and R-Studio programs. Before, we begin, however, we let's quickly explain the difference between R and R-Studio. First, let's start with R.
+The first thing we will do is install the R and RStudio programs. Before, we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
 
 `R` is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. 
 
@@ -21,84 +21,38 @@ After downloading and installing R, open the program. The image below shows the 
 knitr::include_graphics('images-figures/02-r-programs.png')
 ```
 
-## R-Studio 
+## RStudio 
 
-`R-Studio` also runs the R programming language. However, it has several features that make is easier to code in R.
+`RStudio` also runs the R programming language. However, it has several features that make is easier to code in R.
 
 For instance, it is very easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
 
-Because R-Studio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open R-Studio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in R-Studio.
+Because RStudio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open RStudio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in RStudio.
 
-Please use the following link to download R-Studio
+Please use the following link to download RStudio
 <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#downloads</a>
 
-If you are having trouble finding your way around the R-Studio website, you an watch the following video. 
-<a href="https://drive.google.com/file/d/11U9VhHL40X8E0J3NfG3mw9v1ltoFUV_J/view?usp=sharing" target="_blank">Watch: How do download R-Studio</a>
+If you are having trouble finding your way around the RStudio website, you an watch the following video. 
+<a href="https://drive.google.com/file/d/11U9VhHL40X8E0J3NfG3mw9v1ltoFUV_J/view?usp=sharing" target="_blank">Watch: How do download RStudio</a>
 
-After downloading and installing R-Studio, open the program. It should look like this. 
+After downloading and installing RStudio, open the program. It should look like this. 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('images-figures/02-r-studio-gui.png')
 ```
 
-### More on the R-Studio GUI
+### More on the RStudio GUI
 
-As you can see from opening R-Studio, the GUI has several different panes, buttons, tabs, and icons. The `Console` (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
+As you can see from opening RStudio, the GUI has several different panes, buttons, tabs, and icons. The `Console` (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
 
 The `Environment` pane will display stored datasets. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as `plots`, `packages`, `help`, and `viewer`. We will cover purpose of these tabs later in the book. 
 
-Finally, the `Files` pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in R-Studio, the displayed files defaults to where the project has been saved (more on this later). The `History` tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about `packages`, `plots`, `help`, and `viewer` later on. 
+Finally, the `Files` pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in RStudio, the displayed files defaults to where the project has been saved (more on this later). The `History` tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about `packages`, `plots`, `help`, and `viewer` later on. 
 
 
 ### R-Markdown Files
 R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
 
-### Creating a New R-Markdown File
-On the top-left corner in R-Studio, select File -\> New File -\> R-Markdown. 
-
-
-### R-Markdown Magic: Code Chunks
-
-Let's get familiar with the concept of Code Chunks. Code chunks
-
-This is specific feature of markdown (.Rmd) files, meaning that
-
-## Creating code chunks in R-Markdown
-
-There are three ways to create a Code Chunk.
-
-1.  You can create a new chunk of code by typing the following:
-
-    \`\`\``{r}`
-
-    CODE HERE
-
-    \`\`\`
-
-    The space in between the grave markers, \`\`\``` {r}` CODE HERE ``\`\` is where we can write R code and calculations, such as 2 + 2.
-
-2.  You can insert a code chunk using the `+c` menu button, which appears directly above your R-Markdown document. To create a code chunk, click on the `+c` button, then select R.
-
-3.  You can also use the following keyboard shortcut
-
-    -   alt + command + i (mac)
-
-    -   control + alt + i (windows)
-
-```{r}
-2 + 2
-```
-
-## Running chunks of code
-
-Now that you entered 2+ 2 in the code chunk, you can run this line of code by clicking on the green arrow to the right of the code chunk.
-
-You can also use the following shortcuts to run the code within this code chunk:
-
-command + enter (mac)
-
-control + enter (windows)
-
-## The very basics
+## The Very Basics
 
 ### Simple Calculations
 
@@ -136,7 +90,7 @@ b <- 10 + 2
 c <- 2 + 2
 ```
 
-### Environment Pane in R-Studio
+### Environment Pane in RStudio
 
 Notice that something happened to the environment pane. The environment name shows you the names of the objects we created. You will also see that the stored values are displayed to the right of the object name.
 
@@ -196,20 +150,10 @@ In R, we put our arguments (which are things the function needs to run, and/or e
 
 ## Learning More About Libraries and Functions
 
-If you want to see more information about what you can do with a library like ggplot2, you can put `?` in front of the name of the library.
+If you want to know more about how to use a specific function put a ? in front of the function name.
 
 ```{r}
-
+?head()
 ```
 
-If you want to know more about how to use a specific function put a ? in front of the function name
-
-```{r}
-
-```
-
-You can even do this with sub-functions, like `element_text()`
-
-```{r}
-
-```
+Notice that running `?head()` opened the `help` tab. This tab provides important documentation about the function you looked up using the `?` symbol to the immediate left of your argument (e.g. `?head()`). 
