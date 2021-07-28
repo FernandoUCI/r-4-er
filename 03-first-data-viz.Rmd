@@ -104,6 +104,7 @@ plot(mtcars$hp, mtcars$mpg,
      xlab = "Horsepower", ylab = "MPG", 
      pch = 19, frame = FALSE)
 ```
+
 The only difference between the code above and this code is the addition of pch = 19 and frame = FALSE. pch = 19 refers to creating a scatterplot with a medium-sized filled circle and frame = FALSE refers to creating a scatterplot with no boarders. 
 
 ### Creating a Scatterplot Using *ggplot2*
