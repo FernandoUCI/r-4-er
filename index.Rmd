@@ -32,7 +32,9 @@ While no experience with R or RStudio or coding is necessary, we do assume that 
 
 ## Structure of the book
 
-This book consists of three parts. `Part I` walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the R programming language, as well as popular libraries. Libraries refer to a suite of features we can use in R, but are not part of the main R program. Finally, because we want you to see the immediate appeal of using R and RStudio, you will also write your first data visualization code.
+This book consists of three parts. 
+
+`Part I` walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the R programming language, as well as popular libraries. Libraries refer to a suite of features we can use in R, but are not part of the main R program. Finally, because we want you to see the immediate appeal of using R and RStudio, you will also write your first data visualization code.
 
 `Part II` will guide you through importing, inspecting, and exploring your data. It is here you will learn all about the 'tidy' method for working with data. This 'tidy' method was developed by Hadley Wickham along with the RStudio team, and it refers to a principles for working with data.
 

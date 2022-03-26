@@ -2,13 +2,15 @@
 
 ## About Libraries 
 
-As we mentioned in the first chapter, the main advantage of R and RStudio is that it is free. How? One of the main reasons is that scientists from all over the world contribute to the software—making their code open access. In order to access other researchers’ packages, you have to install what is called a library. 
+One of the benefits of using an open-source program like R is that it allows users to add new functions and features. For instance, if someone wants to improve how R displays output, a user can build a set of functions. If someone wants to add more . 
+
+The tidyverse set of libraries has been developed and curated by RStudio; the same company that developed the RStudio graphical user interface. 
 
 A library is similar to downloading various apps on your phone. Even though your phone comes with a camera app when you first purchase your iPhone (or any other smart phone), many of us who like to post on Instagram or just want good photos might download other camera or photo-related apps, such as Huji, Focos, Snow, etc. using the App Store (or Google Play Store) because these apps provide more functions compared to the original camera app. 
 
 For example, although you can edit your photos using the basic camera app on your iPhone, such as crop or use certain filters, you cannot get the same vintage vibe as taking a picture using the Huji app. Translating this to RStudio language, *base R* is like the software of your smart phone with the basic apps installed from purchase, whereas *libraries* are the apps you can download from either the App Store or Google Play Store (depending on what phone you have). 
 
-To take advantage of these different "apps" that have been created by scholars across the world, we have to download the "app." Downloading the app, you will use the following code:
+To take advantage of these different "apps" that have been created by scientists and scholars around the world, we have to download the "app." Downloading the app, you will use the following code:
 install.packages(LIBRARY NAME)
 
 There are so many different libraries to choose from. To see what libraries are out there, check out the RStudio website (https://www.rstudio.com/products/rpackages/) and we personally like to follow XXX on Twitter who often create different R-packages. 

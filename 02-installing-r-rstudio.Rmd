@@ -1,10 +1,10 @@
 # Intalling R and RStudio
 
-The first thing we will do is install the R and RStudio programs. Before, we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
+The first thing we will do is install R and RStudio into our computer's hard drive. Before, we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
 
-`R` is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files. 
+`R` is the original program that we need to code in the R programming language. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R programming language, such as running code, opening and saving files. 
 
-## R
+## Installing R
 To install R, visit the Comprehensive R Archive Network website, which can be found here <a href="https://cran.r-project.org/" target="_blank">(https://cran.r-project.org/)</a>. You can right click on this link and select <i>open in new tab</i>.
 
 You have the option of downloading R for Linux, MacOS, or Windows. This information is typically the first set of links (see image).
@@ -16,18 +16,14 @@ If you are have trouble finding your way around the Comprehensive R Archive Netw
 
 <a href="https://drive.google.com/file/d/1WGmdTNg9cmffq89UGMMLvz0UwBNWAwf0/view?usp=sharing" target="_blank">Watch: How do download R</a>
 
-After downloading and installing R, open the program. The image below shows the Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+After downloading and installing R, click on the R icon that was created on your application folder or desktop menu. You should see a window open similar to the image below. The Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('images-figures/02-r-programs.png')
 ```
 
-## RStudio 
+## Install RStudio 
 
-`RStudio` also runs the R programming language. However, it has several features that make is easier to code in R.
-
-For instance, it is very easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
-
-Because RStudio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open RStudio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in RStudio.
+`RStudio` also runs the R programming language. However, it has additional features that make coding in R much easier. Because RStudio is an add-on program, you need to first need to ensure that you successfully installed R on your computer. Note that when you open RStudio, it already imports the R programming language. Therefore, you just need to open RStudio and nothing else. 
 
 Please use the following link to download RStudio
 <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#downloads</a>
@@ -44,13 +40,10 @@ knitr::include_graphics('images-figures/02-r-studio-gui.png')
 
 As you can see from opening RStudio, the GUI has several different panes, buttons, tabs, and icons. The `Console` (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary. 
 
-The `Environment` pane will display stored datasets. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as `plots`, `packages`, `help`, and `viewer`. We will cover purpose of these tabs later in the book. 
+The `Environment` pane will display our data and plots. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as `plots`, `packages`, `help`, and `viewer`. We will cover purpose of these tabs later in the book. 
 
-Finally, the `Files` pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in RStudio, the displayed files defaults to where the project has been saved (more on this later). The `History` tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about `packages`, `plots`, `help`, and `viewer` later on. 
+Finally, the `Files` pane is similar to your computer's file explorer. This pane displays the files that are located in your computer. When we create a project in RStudio, the displayed files defaults to where the project has been saved (more on this later). The `History` tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about `packages`, `plots`, `help`, and `viewer` later on. 
 
-
-### R-Markdown Files
-R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
 
 ## The Very Basics
 
@@ -157,3 +150,8 @@ If you want to know more about how to use a specific function put a ? in front o
 ```
 
 Notice that running `?head()` opened the `help` tab. This tab provides important documentation about the function you looked up using the `?` symbol to the immediate left of your argument (e.g. `?head()`). 
+
+
+# FR NOTE: Perhaps we need a chapter that examines the R-Markdown file
+### R-Markdown Files
+R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
