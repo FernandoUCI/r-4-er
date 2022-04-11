@@ -1,8 +1,8 @@
 # Installing R and RStudio
 
-The first thing we will do is install R and RStudio into our computer's hard drive. Before we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
+The first thing we will do is install R and RStudio into our computer's hard drive. Before we begin, however, we let's quickly explain the difference between R and RStudio.
 
-R is the original program for using the R programming language. When we install R, we are installing two things: (1) the R programming language, and (2) and the program that enables us to run and save our code, otherwise known as the Graphical User Interface (GUI).
+R is the original program for using the R programming language. When we install R, we are installing two things: (1) the R programming language, and (2) and the R program itself that enables us to run and save our code, otherwise known as the Graphical User Interface (GUI).
 
 ## Installing R
 
