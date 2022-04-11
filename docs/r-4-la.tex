@@ -4,14 +4,13 @@
 %
 \documentclass[
 ]{book}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -82,7 +81,7 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -110,7 +109,7 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
@@ -118,7 +117,7 @@
 
 \title{Learning R and RStudio for Education and Social Science Research}
 \author{Fernando Rodriguez and Hye Rin Lee}
-\date{2021-07-27}
+\date{2022-04-09}
 
 \begin{document}
 \maketitle
@@ -152,7 +151,9 @@ While no experience with R or RStudio or coding is necessary, we do assume that 
 \hypertarget{structure-of-the-book}{%
 \section{Structure of the book}\label{structure-of-the-book}}
 
-This book consists of three parts. \texttt{Part\ I} walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the R programming language, as well as popular libraries. Libraries refer to a suite of features we can use in R, but are not part of the main R program. Finally, because we want you to see the immediate appeal of using R and RStudio, you will also write your first data visualization code.
+This book consists of three parts.
+
+\texttt{Part\ I} walks you through installing R, which is the actual program we need to have open in order to run code in RStudio, which is a graphical user interface (GUI) that helps us better manage our project files and datasets. We will then walk you through the most basic concepts surrounding the R programming language, as well as popular libraries. Libraries refer to a suite of features we can use in R, but are not part of the main R program. Finally, because we want you to see the immediate appeal of using R and RStudio, you will also write your first data visualization code.
 
 \texttt{Part\ II} will guide you through importing, inspecting, and exploring your data. It is here you will learn all about the `tidy' method for working with data. This `tidy' method was developed by Hadley Wickham along with the RStudio team, and it refers to a principles for working with data.
 
@@ -178,12 +179,12 @@ We would like to thank the National Science Foundation (Grant Number 1535300) an
 \hypertarget{intalling-r-and-rstudio}{%
 \chapter{Intalling R and RStudio}\label{intalling-r-and-rstudio}}
 
-The first thing we will do is install the R and RStudio programs. Before, we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
+The first thing we will do is install R and RStudio into our computer's hard drive. Before we begin, however, we let's quickly explain the difference between R and RStudio. First, let's start with R.
 
-\texttt{R} is the original program. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R-programming language, such as running code, opening and saving files.
+\texttt{R} is the original program that we need to code in the R programming language. When we install R, we are installing two things: (1) the R programming language, and (2) a Graphical User Interface (GUI) that helps us work with the R programming language, such as running code, opening and saving files.
 
-\hypertarget{r}{%
-\section{R}\label{r}}
+\hypertarget{installing-r}{%
+\section{Installing R}\label{installing-r}}
 
 To install R, visit the Comprehensive R Archive Network website, which can be found here (\url{https://cran.r-project.org/}). You can right click on this link and select open in new tab.
 
@@ -195,18 +196,14 @@ If you are have trouble finding your way around the Comprehensive R Archive Netw
 
 Watch: How do download R
 
-After downloading and installing R, open the program. The image below shows the Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
+After downloading and installing R, click on the R icon that was created on your application folder or desktop menu. You should see a window open similar to the image below. The Windows version on the left and the Mac version is on the right. The R program GUI contains only a few buttons and icons. R looks very simple at first sight, but it does have all of the necessary tools you would need to work with data.
 
 \includegraphics[width=1\linewidth]{images-figures/02-r-programs}
 
-\hypertarget{rstudio}{%
-\section{RStudio}\label{rstudio}}
+\hypertarget{install-rstudio}{%
+\section{Install RStudio}\label{install-rstudio}}
 
-\texttt{RStudio} also runs the R programming language. However, it has several features that make is easier to code in R.
-
-For instance, it is very easy to implement open science practices in your work, like the ability to create notebooks that replicate your data analyses. It also has tools for uploading your work to code-sharing platforms, like Github.
-
-Because RStudio is an add-on program, you need to ensure that you first install R on your computer. Note that when you open RStudio, it already imports the R-programming language. Therefore, there is no need to open the R program when working in RStudio.
+\texttt{RStudio} also runs the R programming language. However, it has additional features that make coding in R much easier. Because RStudio is an add-on program, you need to first need to ensure that you successfully installed R on your computer. Note that when you open RStudio, you are also opening up the R programming language. Therefore, you just need to open RStudio and nothing else.
 
 Please use the following link to download RStudio
 https://www.rstudio.com/products/rstudio/download/\#downloads
@@ -223,14 +220,9 @@ After downloading and installing RStudio, open the program. It should look like 
 
 As you can see from opening RStudio, the GUI has several different panes, buttons, tabs, and icons. The \texttt{Console} (leftmost pane) is where you can type in lines of R code. This pane will also output the results from your code. For this book, we will primarily use the console to quickly check data, especially when we don't necessarily need to save the code. One important thing to understand about the Console pane is that it is temporary.
 
-The \texttt{Environment} pane will display stored datasets. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as \texttt{plots}, \texttt{packages}, \texttt{help}, and \texttt{viewer}. We will cover purpose of these tabs later in the book.
+The \texttt{Environment} pane will display our data and plots. This tab will also display other output, such as images, lists, tables, and the results of statistical tests. Notice that this top right pane has additional tabs, such as \texttt{Plots}, \texttt{Packages}, \texttt{Help}, and \texttt{Viewer}. We will cover purpose of these tabs later in the book.
 
-Finally, the \texttt{Files} pane is similar to your computer's file or finders windows. They display the files that are located in your computer. When we create a project in RStudio, the displayed files defaults to where the project has been saved (more on this later). The \texttt{History} tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about \texttt{packages}, \texttt{plots}, \texttt{help}, and \texttt{viewer} later on.
-
-\hypertarget{r-markdown-files}{%
-\subsection{R-Markdown Files}\label{r-markdown-files}}
-
-R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+Finally, the \texttt{Files} pane works just like your computer's file explorer. This pane displays the files that are located in your computer. The \texttt{History} tab keeps a record of all of the code you entered and provides a useful way to track what you have done. We will learn more about \texttt{Packages}, \texttt{Plots}, \texttt{Help}, and \texttt{Viewer} later on.
 
 \hypertarget{the-very-basics}{%
 \section{The Very Basics}\label{the-very-basics}}
@@ -431,19 +423,29 @@ If you want to know more about how to use a specific function put a ? in front o
 
 Notice that running \texttt{?head()} opened the \texttt{help} tab. This tab provides important documentation about the function you looked up using the \texttt{?} symbol to the immediate left of your argument (e.g.~\texttt{?head()}).
 
+\hypertarget{fr-note-perhaps-we-need-a-chapter-that-examines-the-r-markdown-file}{%
+\chapter{FR NOTE: Perhaps we need a chapter that examines the R-Markdown file}\label{fr-note-perhaps-we-need-a-chapter-that-examines-the-r-markdown-file}}
+
+\hypertarget{r-markdown-files}{%
+\subsection{R-Markdown Files}\label{r-markdown-files}}
+
+R-Markdown files are a type of document that serves as a data notebook, where we can write text as well as lines of code. The benefit of using an R-Markdown file is that we can keep a record of everything we do, from importing our data, inspecting and cleaning variables, to analyzing and visualizing our data. This allows us to share our work with others in a completely transparent way. R-Markdown files do have some characteristics that look quite odd, but we'll address those in a bit.
+
 \hypertarget{introducing-libraries-building-your-first-data-visualization-using-base-r-vs.-a-library}{%
 \chapter{\texorpdfstring{Introducing Libraries + Building Your First Data Visualization Using \emph{base-R} vs.~A Library}{Introducing Libraries + Building Your First Data Visualization Using base-R vs.~A Library}}\label{introducing-libraries-building-your-first-data-visualization-using-base-r-vs.-a-library}}
 
 \hypertarget{about-libraries}{%
 \section{About Libraries}\label{about-libraries}}
 
-As we mentioned in the first chapter, the main advantage of R and RStudio is that it is free. How? One of the main reasons is that scientists from all over the world contribute to the software---making their code open access. In order to access other researchers' packages, you have to install what is called a library.
+One of the benefits of using an open-source program like R is that it allows users to add new functions and features. For instance, if someone wants to improve how R displays output, a user can build a set of functions. If someone wants to add more .
+
+The tidyverse set of libraries has been developed and curated by RStudio; the same company that developed the RStudio graphical user interface.
 
 A library is similar to downloading various apps on your phone. Even though your phone comes with a camera app when you first purchase your iPhone (or any other smart phone), many of us who like to post on Instagram or just want good photos might download other camera or photo-related apps, such as Huji, Focos, Snow, etc. using the App Store (or Google Play Store) because these apps provide more functions compared to the original camera app.
 
 For example, although you can edit your photos using the basic camera app on your iPhone, such as crop or use certain filters, you cannot get the same vintage vibe as taking a picture using the Huji app. Translating this to RStudio language, \emph{base R} is like the software of your smart phone with the basic apps installed from purchase, whereas \emph{libraries} are the apps you can download from either the App Store or Google Play Store (depending on what phone you have).
 
-To take advantage of these different ``apps'' that have been created by scholars across the world, we have to download the ``app.'' Downloading the app, you will use the following code:
+To take advantage of these different ``apps'' that have been created by scientists and scholars around the world, we have to download the ``app.'' Downloading the app, you will use the following code:
 install.packages(LIBRARY NAME)
 
 There are so many different libraries to choose from. To see what libraries are out there, check out the RStudio website (\url{https://www.rstudio.com/products/rpackages/}) and we personally like to follow XXX on Twitter who often create different R-packages.
@@ -532,13 +534,13 @@ Instead, you can run:
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
 \end{verbatim}
 
 \begin{verbatim}
-## v tibble  3.0.5     v dplyr   1.0.3
-## v tidyr   1.1.2     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.0
+## v tibble  3.1.6     v dplyr   1.0.8
+## v tidyr   1.2.0     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1
 ## v purrr   0.3.4
 \end{verbatim}
 
@@ -591,6 +593,7 @@ Using the \texttt{plot} function, you can also change the plotting symbols. For 
 \end{Shaded}
 
 \includegraphics{r-4-la_files/figure-latex/unnamed-chunk-23-1.pdf}
+
 The only difference between the code above and this code is the addition of pch = 19 and frame = FALSE. pch = 19 refers to creating a scatterplot with a medium-sized filled circle and frame = FALSE refers to creating a scatterplot with no boarders.
 
 \hypertarget{creating-a-scatterplot-using-ggplot2}{%
